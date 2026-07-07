@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:healthpassport/features/login/presentation/login_view.dart';
+import 'package:healthpassport/features/login/presentation/views/login_view.dart';
 import 'package:healthpassport/features/splash/presentation/views/splash_view.dart';
 
 class AppRoutes {
