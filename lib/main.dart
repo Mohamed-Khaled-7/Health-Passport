@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthpassport/features/splash/presentation/views/splash_view.dart';
+import 'package:healthpassport/core/utils/app_routes.dart';
 
 void main() {
   runApp(const HealthPassport());
@@ -10,9 +10,9 @@ class HealthPassport extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
+      routerConfig: AppRoutes().routes,
       title: 'Flutter Demo',
     );
   }

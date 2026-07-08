@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/features/splash/presentation/views/widgets/splash_container.dart';
@@ -18,8 +19,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   void navigateToNextScreen() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, AppRoutes().loginRoute);
+    Future.delayed(const Duration(seconds: 2), () {
+      if (!mounted) return;
+      context.go(AppRoutes().loginRoute);
     });
   }
 
