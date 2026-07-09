@@ -21,33 +21,29 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void navigateToNextScreen() {
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
-      context.go(AppRoutes().loginRoute);
+      context.go(AppRoutes.loginRoute);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFF1D9E75),
-
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(child: SplashContainer()),
-          Text(
-            'الجواز الصحي',
-            style: GoogleFonts.cairo(
-              fontSize: 24,
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-            ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(child: SplashContainer()),
+        Text(
+          'الجواز الصحي',
+          style: GoogleFonts.cairo(
+            fontSize: 24,
+            fontWeight: FontWeight.w700,
+            color: Colors.white,
           ),
-          Text(
-            'سجلك الطبي معاك دايماً',
-            style: GoogleFonts.cairo(fontSize: 18, color: Colors.white),
-          ),
-        ],
-      ),
+        ),
+        Text(
+          'سجلك الطبي معاك دايماً',
+          style: GoogleFonts.cairo(fontSize: 18, color: Colors.white),
+        ),
+      ],
     );
   }
 }

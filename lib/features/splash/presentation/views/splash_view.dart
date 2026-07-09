@@ -6,6 +6,9 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SplashViewBody();
+    return Scaffold(
+      backgroundColor: Color(0xFF1D9E75),
+      body: SplashViewBody(),
+    );
   }
 }

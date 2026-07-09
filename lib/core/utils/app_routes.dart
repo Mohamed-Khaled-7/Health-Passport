@@ -3,9 +3,9 @@ import 'package:healthpassport/features/login/presentation/views/login_view.dart
 import 'package:healthpassport/features/splash/presentation/views/splash_view.dart';
 
 class AppRoutes {
-  final String splashRoute = '/SplashView';
-  final String loginRoute = '/LoginView';
-  final routes = GoRouter(
+  static final  String splashRoute = '/SplashView';
+  static final String loginRoute = '/LoginView';
+  static final routes = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SplashView()),
       GoRoute(path: '/LoginView', builder: (context, state) => const LoginView()),
