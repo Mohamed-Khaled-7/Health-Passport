@@ -22,12 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "countryCode": MessageLookupByLibrary.simpleMessage("+"),
+    "changePhoneNumber": MessageLookupByLibrary.simpleMessage("تغيير الرقم"),
+    "confirmAndLogin": MessageLookupByLibrary.simpleMessage("تأكيد والدخول"),
+    "countryCode": MessageLookupByLibrary.simpleMessage("+20"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage("أدخل رقم الهاتف"),
     "phoneHint": MessageLookupByLibrary.simpleMessage("01X XXXX XXXX"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "إرسال رمز التحقق",
+    ),
+    "verificationCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
+    "verificationCodeSent": MessageLookupByLibrary.simpleMessage(
+      "تم إرسال رمز من 4 أرقام ",
     ),
   };
 }

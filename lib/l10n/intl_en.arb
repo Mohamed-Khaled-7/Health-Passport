@@ -3,5 +3,9 @@
     "phoneNumber": "Phone Number",
     "phoneHint": "01X XXXX XXXX",
     "sendVerificationCode": "Send Verification Code",
-    "countryCode": "+20"
+    "countryCode": "+20",
+    "changePhoneNumber": "Change Phone Number",
+    "verificationCode": "Verification Code",
+    "verificationCodeSent": "A 4-digit verification code has been sent ",
+    "confirmAndLogin": "Confirm & Login"
 }

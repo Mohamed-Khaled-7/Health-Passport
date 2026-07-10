@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/country_badge.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/login_button.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/phone_icon.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/phone_text_field.dart';
 import 'package:healthpassport/generated/l10n.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -17,13 +20,13 @@ class LoginViewBody extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 50),
-            PhoneIcon(),
+            PhoneIcon(icon: Icon(LucideIcons.smartphone)),
             const SizedBox(height: 30),
             Text(
               S.of(context).enterPhoneNumber,
               style: GoogleFonts.cairo(
                 fontSize: 24,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w400,
                 color: Colors.black,
               ),
             ),
@@ -39,8 +42,9 @@ class LoginViewBody extends StatelessWidget {
               ],
             ),
             LoginButton(
+              title: S.of(context).sendVerificationCode,
               onPressed: () {
-                // Handle login button press
+                GoRouter.of(context).push(AppRoutes.verification);
               },
             ),
           ],

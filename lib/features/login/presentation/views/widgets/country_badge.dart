@@ -21,7 +21,7 @@ class CountryBadge extends StatelessWidget {
       child: Center(
         child: Text(
           S.of(context).countryCode,
-          style: GoogleFonts.inter(
+          style: GoogleFonts.cairo(
             fontSize: 16.spMax,
             fontWeight: FontWeight.w600,
             color: AppColors.muted,

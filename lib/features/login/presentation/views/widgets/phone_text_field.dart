@@ -16,11 +16,11 @@ class PhoneTextField extends StatelessWidget {
         textDirection: TextDirection.ltr,
         textAlign: TextAlign.right,
         maxLength: 11,
-        style: GoogleFonts.inter(fontSize: 20.sp, color: AppColors.ink),
+        style: GoogleFonts.cairo(fontSize: 20.sp, color: AppColors.ink),
         decoration: InputDecoration(
           counterText: '',
           hintText: S.of(context).phoneHint,
-          hintStyle: GoogleFonts.inter(color: AppColors.muted, fontSize: 18.sp),
+          hintStyle: GoogleFonts.cairo(color: AppColors.muted, fontSize: 18.sp),
           contentPadding: EdgeInsets.symmetric(
             horizontal: 20.w,
             vertical: 16.h,

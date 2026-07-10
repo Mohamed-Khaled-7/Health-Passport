@@ -10,7 +10,6 @@ void main() {
 
 class HealthPassport extends StatelessWidget {
   const HealthPassport({super.key});
-
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(

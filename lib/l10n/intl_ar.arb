@@ -3,5 +3,9 @@
     "phoneNumber": "رقم الهاتف",
     "phoneHint": "01X XXXX XXXX",
     "sendVerificationCode": "إرسال رمز التحقق",
-    "countryCode": "+"
+    "countryCode": "+20",
+    "changePhoneNumber": "تغيير الرقم",
+    "verificationCode": "رمز التحقق",
+    "verificationCodeSent": "تم إرسال رمز من 4 أرقام ",
+    "confirmAndLogin": "تأكيد والدخول"
 }

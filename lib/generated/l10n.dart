@@ -93,6 +93,46 @@ class S {
   String get countryCode {
     return Intl.message('+20', name: 'countryCode', desc: '', args: []);
   }
+
+  /// `Change Phone Number`
+  String get changePhoneNumber {
+    return Intl.message(
+      'Change Phone Number',
+      name: 'changePhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification Code`
+  String get verificationCode {
+    return Intl.message(
+      'Verification Code',
+      name: 'verificationCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A 4-digit verification code has been sent `
+  String get verificationCodeSent {
+    return Intl.message(
+      'A 4-digit verification code has been sent ',
+      name: 'verificationCodeSent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm & Login`
+  String get confirmAndLogin {
+    return Intl.message(
+      'Confirm & Login',
+      name: 'confirmAndLogin',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
