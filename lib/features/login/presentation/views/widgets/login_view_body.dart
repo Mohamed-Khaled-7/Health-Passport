@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/country_badge.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/login_button.dart';
-import 'package:healthpassport/features/login/presentation/views/widgets/login_container.dart';
+import 'package:healthpassport/features/login/presentation/views/widgets/phone_icon.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/phone_text_field.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -11,13 +11,12 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: EdgeInsets.only(top: 80.h),
+    return SafeArea(
+      child: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(height: 50),
-            LoginContainer(),
+            PhoneIcon(),
             const SizedBox(height: 30),
             Text(
               'أدخل رقم الهاتف',
@@ -30,7 +29,7 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(height: 5),
             Row(
               children: [
-                PhoneTextField(),
+                Expanded(child: PhoneTextField()),
                 Padding(
                   padding: EdgeInsets.only(top: 20.h, right: 20.w),
                   child: CountryBadge(),

@@ -10,7 +10,7 @@ class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 200.h),
+      padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 23.h),
       child: SizedBox(
         width: double.infinity,
         height: 54.h,

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
-class LoginContainer extends StatelessWidget {
-  const LoginContainer({super.key});
+class PhoneIcon extends StatelessWidget {
+  const PhoneIcon({super.key});
 
   @override
   Widget build(BuildContext context) {
