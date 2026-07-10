@@ -53,13 +53,56 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Enter your phone number`
+  String get enterPhoneNumber {
+    return Intl.message(
+      'Enter your phone number',
+      name: 'enterPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `01X XXXX XXXX`
+  String get phoneHint {
+    return Intl.message('01X XXXX XXXX', name: 'phoneHint', desc: '', args: []);
+  }
+
+  /// `Send Verification Code`
+  String get sendVerificationCode {
+    return Intl.message(
+      'Send Verification Code',
+      name: 'sendVerificationCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+20`
+  String get countryCode {
+    return Intl.message('+20', name: 'countryCode', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[Locale.fromSubtags(languageCode: 'en')];
+    return const <Locale>[
+      Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
+    ];
   }
 
   @override

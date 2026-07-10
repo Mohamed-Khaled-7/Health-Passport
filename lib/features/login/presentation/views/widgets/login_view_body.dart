@@ -5,6 +5,7 @@ import 'package:healthpassport/features/login/presentation/views/widgets/country
 import 'package:healthpassport/features/login/presentation/views/widgets/login_button.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/phone_icon.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/phone_text_field.dart';
+import 'package:healthpassport/generated/l10n.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -19,7 +20,7 @@ class LoginViewBody extends StatelessWidget {
             PhoneIcon(),
             const SizedBox(height: 30),
             Text(
-              'أدخل رقم الهاتف',
+              S.of(context).enterPhoneNumber,
               style: GoogleFonts.cairo(
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
@@ -28,6 +29,7 @@ class LoginViewBody extends StatelessWidget {
             ),
             const SizedBox(height: 5),
             Row(
+              textDirection: TextDirection.ltr,
               children: [
                 Expanded(child: PhoneTextField()),
                 Padding(

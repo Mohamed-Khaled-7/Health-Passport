@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthpassport/generated/l10n.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({super.key, required this.onPressed});
@@ -25,7 +26,7 @@ class LoginButton extends StatelessWidget {
             ),
           ),
           child: Text(
-            'إرسال رمز التحقق',
+            S.of(context).sendVerificationCode,
             style: GoogleFonts.cairo(
               fontSize: 16.sp,
               fontWeight: FontWeight.w700,

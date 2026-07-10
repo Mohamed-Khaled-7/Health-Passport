@@ -1,1 +1,7 @@
-{}
+{
+    "enterPhoneNumber": "Enter your phone number",
+    "phoneNumber": "Phone Number",
+    "phoneHint": "01X XXXX XXXX",
+    "sendVerificationCode": "Send Verification Code",
+    "countryCode": "+20"
+}
