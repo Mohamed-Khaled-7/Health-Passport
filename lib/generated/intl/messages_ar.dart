@@ -22,6 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "appName": MessageLookupByLibrary.simpleMessage("الجواز الصحي"),
+    "appTagline": MessageLookupByLibrary.simpleMessage(
+      "سجلك الطبي معاك دائمًا",
+    ),
     "changePhoneNumber": MessageLookupByLibrary.simpleMessage("تغيير الرقم"),
     "confirmAndLogin": MessageLookupByLibrary.simpleMessage("تأكيد والدخول"),
     "countryCode": MessageLookupByLibrary.simpleMessage("+20"),

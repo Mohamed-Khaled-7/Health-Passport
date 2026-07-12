@@ -1,4 +1,6 @@
 {
+    "appName": "الجواز الصحي",
+    "appTagline": "سجلك الطبي معاك دائمًا",
     "enterPhoneNumber": "أدخل رقم الهاتف",
     "phoneNumber": "رقم الهاتف",
     "phoneHint": "01X XXXX XXXX",

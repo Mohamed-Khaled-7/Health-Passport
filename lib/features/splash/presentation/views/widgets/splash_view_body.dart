@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/features/splash/presentation/views/widgets/splash_container.dart';
+import 'package:healthpassport/generated/l10n.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -32,7 +33,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       children: [
         Center(child: SplashContainer()),
         Text(
-          'الجواز الصحي',
+          S.of(context).appName,
           style: GoogleFonts.cairo(
             fontSize: 24,
             fontWeight: FontWeight.w700,
@@ -40,7 +41,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           ),
         ),
         Text(
-          'سجلك الطبي معاك دايماً',
+          S.of(context).appTagline,
           style: GoogleFonts.cairo(fontSize: 18, color: Colors.white),
         ),
       ],

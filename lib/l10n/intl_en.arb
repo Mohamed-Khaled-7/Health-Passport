@@ -1,4 +1,6 @@
 {
+    "appName": "Health Passport",
+    "appTagline": "Your medical record is always with you",
     "enterPhoneNumber": "Enter your phone number",
     "phoneNumber": "Phone Number",
     "phoneHint": "01X XXXX XXXX",

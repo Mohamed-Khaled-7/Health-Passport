@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "110505923172",
+    "project_id": "health-passport-575ea",
+    "storage_bucket": "health-passport-575ea.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110505923172:android:89fcd3b3509256ea900571",
+        "android_client_info": {
+          "package_name": "com.example.healthpassport"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDZR6meNCzNlD8djnLuVdH9AnqnSOWHfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

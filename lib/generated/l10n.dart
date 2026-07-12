@@ -54,6 +54,21 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Health Passport`
+  String get appName {
+    return Intl.message('Health Passport', name: 'appName', desc: '', args: []);
+  }
+
+  /// `Your medical record is always with you`
+  String get appTagline {
+    return Intl.message(
+      'Your medical record is always with you',
+      name: 'appTagline',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter your phone number`
   String get enterPhoneNumber {
     return Intl.message(
