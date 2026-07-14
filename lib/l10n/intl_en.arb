@@ -9,5 +9,6 @@
     "changePhoneNumber": "Change Phone Number",
     "verificationCode": "Verification Code",
     "verificationCodeSent": "A 4-digit verification code has been sent ",
-    "confirmAndLogin": "Confirm & Login"
+    "confirmAndLogin": "Confirm & Login",
+    "invalidOtpError": "Invalid OTP code"
 }

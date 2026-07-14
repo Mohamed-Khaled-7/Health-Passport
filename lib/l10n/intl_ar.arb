@@ -9,5 +9,6 @@
     "changePhoneNumber": "تغيير الرقم",
     "verificationCode": "رمز التحقق",
     "verificationCodeSent": "تم إرسال رمز من 4 أرقام ",
-    "confirmAndLogin": "تأكيد والدخول"
+    "confirmAndLogin": "تأكيد والدخول",
+    "invalidOtpError": "رمز غير صحيح"
 }

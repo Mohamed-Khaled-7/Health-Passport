@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "confirmAndLogin": MessageLookupByLibrary.simpleMessage("تأكيد والدخول"),
     "countryCode": MessageLookupByLibrary.simpleMessage("+20"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage("أدخل رقم الهاتف"),
+    "invalidOtpError": MessageLookupByLibrary.simpleMessage("رمز غير صحيح"),
     "phoneHint": MessageLookupByLibrary.simpleMessage("01X XXXX XXXX"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
