@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/code_verification_view_body.dart';
 
-class CodeVerificationView extends StatelessWidget {
-  const CodeVerificationView({super.key});
+class VerificationView extends StatelessWidget {
+  const VerificationView({super.key});
 
   @override
   Widget build(BuildContext context) {

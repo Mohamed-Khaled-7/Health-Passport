@@ -158,6 +158,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter your phone number`
+  String get phoneNumberRequired {
+    return Intl.message(
+      'Please enter your phone number',
+      name: 'phoneNumberRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid phone number`
+  String get invalidPhoneNumber {
+    return Intl.message(
+      'Please enter a valid phone number',
+      name: 'invalidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

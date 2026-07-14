@@ -10,5 +10,7 @@
     "verificationCode": "رمز التحقق",
     "verificationCodeSent": "تم إرسال رمز من 4 أرقام ",
     "confirmAndLogin": "تأكيد والدخول",
-    "invalidOtpError": "رمز غير صحيح"
+    "invalidOtpError": "رمز غير صحيح",
+    "phoneNumberRequired": "يرجى إدخال رقم الهاتف",
+    "invalidPhoneNumber": "يرجى إدخال رقم هاتف صحيح"
 }

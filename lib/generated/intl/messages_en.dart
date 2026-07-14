@@ -35,8 +35,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter your phone number",
     ),
     "invalidOtpError": MessageLookupByLibrary.simpleMessage("Invalid OTP code"),
+    "invalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid phone number",
+    ),
     "phoneHint": MessageLookupByLibrary.simpleMessage("01X XXXX XXXX"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
+    "phoneNumberRequired": MessageLookupByLibrary.simpleMessage(
+      "Please enter your phone number",
+    ),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "Send Verification Code",
     ),

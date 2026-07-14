@@ -31,8 +31,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "countryCode": MessageLookupByLibrary.simpleMessage("+20"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage("أدخل رقم الهاتف"),
     "invalidOtpError": MessageLookupByLibrary.simpleMessage("رمز غير صحيح"),
+    "invalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال رقم هاتف صحيح",
+    ),
     "phoneHint": MessageLookupByLibrary.simpleMessage("01X XXXX XXXX"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+    "phoneNumberRequired": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال رقم الهاتف",
+    ),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "إرسال رمز التحقق",
     ),

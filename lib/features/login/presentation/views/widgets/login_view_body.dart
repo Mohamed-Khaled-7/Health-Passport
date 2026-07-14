@@ -10,44 +10,60 @@ import 'package:healthpassport/features/login/presentation/views/widgets/phone_t
 import 'package:healthpassport/generated/l10n.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
-class LoginViewBody extends StatelessWidget {
+class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
 
+  @override
+  State<LoginViewBody> createState() => _LoginViewBodyState();
+}
+
+class _LoginViewBodyState extends State<LoginViewBody> {
+  final TextEditingController controller = TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  @override 
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(height: 50),
-            PhoneIcon(icon: Icon(LucideIcons.smartphone)),
-            const SizedBox(height: 30),
-            Text(
-              S.of(context).enterPhoneNumber,
-              style: GoogleFonts.cairo(
-                fontSize: 24,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-              ),
-            ),
-            const SizedBox(height: 5),
-            Row(
-              textDirection: TextDirection.ltr,
-              children: [
-                Expanded(child: PhoneTextField()),
-                Padding(
-                  padding: EdgeInsets.only(top: 20.h, right: 20.w),
-                  child: CountryBadge(),
+        child: Form(
+          key: formKey,
+          child: Column(
+            children: [
+              const SizedBox(height: 50),
+              PhoneIcon(icon: Icon(LucideIcons.smartphone)),
+              const SizedBox(height: 30),
+              Text(
+                S.of(context).enterPhoneNumber,
+                style: GoogleFonts.cairo(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
                 ),
-              ],
-            ),
-            LoginButton(
-              title: S.of(context).sendVerificationCode,
-              onPressed: () {
-                GoRouter.of(context).push(AppRoutes.verification);
-              },
-            ),
-          ],
+              ),
+              const SizedBox(height: 5),
+              Row(
+                textDirection: TextDirection.ltr,
+                children: [
+                  Expanded(child: PhoneTextField(controller: controller)),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20.h, right: 20.w),
+                    child: CountryBadge(),
+                  ),
+                ],
+              ),
+              LoginButton(
+                title: S.of(context).sendVerificationCode,
+                onPressed: () {
+                  
+                  GoRouter.of(context).push(AppRoutes.verification);
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

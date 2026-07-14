@@ -10,5 +10,7 @@
     "verificationCode": "Verification Code",
     "verificationCodeSent": "A 4-digit verification code has been sent ",
     "confirmAndLogin": "Confirm & Login",
-    "invalidOtpError": "Invalid OTP code"
+    "invalidOtpError": "Invalid OTP code",
+    "phoneNumberRequired": "Please enter your phone number",
+    "invalidPhoneNumber": "Please enter a valid phone number"
 }
