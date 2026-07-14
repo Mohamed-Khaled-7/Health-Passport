@@ -8,8 +8,21 @@ import 'package:healthpassport/features/login/presentation/views/widgets/phone_i
 import 'package:healthpassport/generated/l10n.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
-class CodeVerificationViewBody extends StatelessWidget {
+class CodeVerificationViewBody extends StatefulWidget {
   const CodeVerificationViewBody({super.key});
+
+  @override
+  State<CodeVerificationViewBody> createState() =>
+      _CodeVerificationViewBodyState();
+}
+
+class _CodeVerificationViewBodyState extends State<CodeVerificationViewBody> {
+  final TextEditingController otpController = TextEditingController();
+  @override
+  void dispose() {
+    otpController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +67,10 @@ class CodeVerificationViewBody extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(top: 20.h),
-                child: OtpTextField(),
+                child: OtpTextField(controller: otpController),
               ),
               LoginButton(
+                isActive: otpController.text.length == 4,
                 onPressed: () {},
                 title: S.of(context).confirmAndLogin,
               ),

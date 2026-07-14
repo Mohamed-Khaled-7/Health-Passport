@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class LoginButton extends StatelessWidget {
-  const LoginButton({Key? key, required this.onPressed, required this.title})
-    : super(key: key);
+  const LoginButton({
+    Key? key,
+    required this.onPressed,
+    required this.title,
+    required this.isActive,
+  }) : super(key: key);
 
   final VoidCallback onPressed;
+  final isActive;
   final String title;
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,9 @@ class LoginButton extends StatelessWidget {
         child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFFA6DCCF),
+            backgroundColor:isActive
+                ? const Color(0xFF1D9E75)
+                : const Color(0xFFA6DCCF),
             foregroundColor: Colors.white,
             elevation: 0,
             shape: RoundedRectangleBorder(

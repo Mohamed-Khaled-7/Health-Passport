@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:healthpassport/core/theme/app_color.dart';
-import 'package:healthpassport/features/login/presentation/views/widgets/validate_phone_nnumber.dart';
+import 'package:healthpassport/features/login/presentation/views/widgets/validate_phone_number.dart';
 import 'package:healthpassport/generated/l10n.dart';
 
 class PhoneTextField extends StatelessWidget {
@@ -18,7 +18,7 @@ class PhoneTextField extends StatelessWidget {
       padding: EdgeInsets.only(top: 20.h, left: 20.w, right: 8.w),
       child: TextFormField(
         validator: (value) {
-          validatePhoneNumer(
+          return validatePhoneNumer(
             value,
             phoneNumberRequired: S.of(context).phoneNumberRequired,
             invalidPhoneNumber: S.of(context).invalidPhoneNumber,
