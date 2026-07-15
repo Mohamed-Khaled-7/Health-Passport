@@ -4,13 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpTextField extends StatelessWidget {
-  
   final TextEditingController controller;
 
-  const OtpTextField({
-    Key? key,
-    required this.controller,
-  }) : super(key: key);
+  const OtpTextField({Key? key, required this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +26,7 @@ class OtpTextField extends StatelessWidget {
     );
 
     return Pinput(
-      length: 4,
+      length: 6,
       keyboardType: TextInputType.number,
       defaultPinTheme: defaultPinTheme,
 

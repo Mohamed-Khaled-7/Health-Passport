@@ -10,7 +10,6 @@ import 'package:healthpassport/features/login/presentation/views/widgets/country
 import 'package:healthpassport/features/login/presentation/views/widgets/login_button.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/phone_icon.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/phone_text_field.dart';
-import 'package:healthpassport/features/login/presentation/views/widgets/validate_phone_number.dart';
 import 'package:healthpassport/generated/l10n.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
@@ -33,7 +32,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
   void submit() {
     if (!(formKey.currentState?.validate() ?? false)) return;
 
-    final phoneNumber = convertNumberToInternational( controller.text);
+    final phoneNumber = convertNumberToInternational(controller.text);
     context.read<LoginBloc>().add(SendOtpEvent(phoneNumber: phoneNumber));
   }
 
@@ -47,7 +46,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           ).showSnackBar(SnackBar(content: Text(state.message)));
         }
         if (state is OtpSentSuccess) {
-          GoRouter.of(context).push(AppRoutes.verification);
+          GoRouter.of(
+            context,
+          ).push(AppRoutes.verification, extra: state.verificationId);
         }
       },
       builder: (context, state) {
@@ -82,10 +83,16 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                       ),
                     ],
                   ),
-                  LoginButton(
-                    isActive : controller.text.length ==11,
-                    title: S.of(context).sendVerificationCode,
-                    onPressed: submit,
+                  ValueListenableBuilder<TextEditingValue>(
+                    valueListenable: controller,
+                    builder: (context, value, child) {
+                      return LoginButton(
+                        isLoading: state is LoginLoading,
+                        isActive: controller.text.length == 11,
+                        title: S.of(context).sendVerificationCode,
+                        onPressed: submit,
+                      );
+                    },
                   ),
                 ],
               ),

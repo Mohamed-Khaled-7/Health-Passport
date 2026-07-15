@@ -9,11 +9,13 @@ class LoginButton extends StatelessWidget {
     required this.onPressed,
     required this.title,
     required this.isActive,
+    required this.isLoading,
   }) : super(key: key);
 
   final VoidCallback onPressed;
   final isActive;
   final String title;
+  final bool isLoading;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,9 +24,9 @@ class LoginButton extends StatelessWidget {
         width: double.infinity,
         height: 54.h,
         child: ElevatedButton(
-          onPressed: onPressed,
+          onPressed: isActive && !isLoading ? onPressed : null,
           style: ElevatedButton.styleFrom(
-            backgroundColor:isActive
+            backgroundColor: isActive
                 ? const Color(0xFF1D9E75)
                 : const Color(0xFFA6DCCF),
             foregroundColor: Colors.white,
@@ -33,14 +35,23 @@ class LoginButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(16.r),
             ),
           ),
-          child: Text(
-            title,
-            style: GoogleFonts.cairo(
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-            ),
-          ),
+          child: isLoading
+              ? const SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(
+                    color: Colors.white,
+                    strokeWidth: 2.5,
+                  ),
+                )
+              : Text(
+                  title,
+                  style: GoogleFonts.cairo(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                  ),
+                ),
         ),
       ),
     );
