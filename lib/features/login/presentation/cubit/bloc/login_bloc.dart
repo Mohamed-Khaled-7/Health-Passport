@@ -15,7 +15,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     emit(LoginLoading());
     final result = await loginUseCase.sendOtp(phoneNumber: event.phoneNumber);
     result.fold(
-      (l) => emit(LoginFailure(message: l.message)),
+      (l) => emit(LoginFailure(message: l.errMessage)),
       (r) => emit(OtpSentSuccess(verificationId: r)),
     );
   }
@@ -30,7 +30,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       otp: event.otp,
     );
     result.fold(
-      (l) => emit(LoginFailure(message: l.message)),
+      (l) => emit(LoginFailure(message: l.errMessage)),
       (r) => emit((VerifyOtpSuccess())),
     );
   }

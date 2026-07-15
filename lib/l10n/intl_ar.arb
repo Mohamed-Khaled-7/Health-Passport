@@ -8,9 +8,18 @@
     "countryCode": "+20",
     "changePhoneNumber": "تغيير الرقم",
     "verificationCode": "رمز التحقق",
-    "verificationCodeSent": "تم إرسال رمز من 4 أرقام ",
+    "verificationCodeSent": "تم إرسال رمز من 6 أرقام ",
     "confirmAndLogin": "تأكيد والدخول",
     "invalidOtpError": "رمز غير صحيح",
     "phoneNumberRequired": "يرجى إدخال رقم الهاتف",
-    "invalidPhoneNumber": "يرجى إدخال رقم هاتف صحيح"
+    "invalidPhoneNumber": "يرجى إدخال رقم هاتف صحيح",
+    "tooManyRequests": "تم إجراء محاولات كثيرة. يرجى المحاولة مرة أخرى لاحقًا",
+    "quotaExceeded": "تم تجاوز الحد المسموح لإرسال رسائل التحقق. يرجى المحاولة لاحقًا",
+    "operationNotAllowed": "تسجيل الدخول باستخدام رقم الهاتف غير متاح حاليًا",
+    "invalidVerificationCode": "رمز التحقق غير صحيح",
+    "invalidVerificationId": "جلسة التحقق غير صالحة. يرجى المحاولة مرة أخرى",
+    "sessionExpired": "انتهت صلاحية رمز التحقق. يرجى طلب رمز جديد",
+    "networkRequestFailed": "يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى",
+    "unexpectedError": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى",
+    "otpSentSuccessfully": "تم إرسال رمز التحقق بنجاح"
 }

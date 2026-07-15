@@ -26,6 +26,7 @@ class OtpTextField extends StatelessWidget {
     );
 
     return Pinput(
+      controller: controller,
       length: 6,
       keyboardType: TextInputType.number,
       defaultPinTheme: defaultPinTheme,

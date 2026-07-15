@@ -61,32 +61,46 @@ void main() {
   });
   group('verification view', () {
     testWidgets('arroew back', (tester) async {
-      await tester.pumpWidget(buildTestApp(home: const VerificationView()));
+      await tester.pumpWidget(
+        buildTestApp(home: const VerificationView('test_verification_id')),
+      );
       expect(find.byIcon(Icons.arrow_back), findsOneWidget);
     });
     testWidgets('show change number', (tester) async {
-      await tester.pumpWidget(buildTestApp(home: const VerificationView()));
+      await tester.pumpWidget(
+        buildTestApp(home: const VerificationView('test_verification_id')),
+      );
       expect(find.text('تغيير الرقم'), findsOneWidget);
     });
     testWidgets('title', (tester) async {
-      await tester.pumpWidget(buildTestApp(home: const VerificationView()));
+      await tester.pumpWidget(
+        buildTestApp(home: const VerificationView('test_verification_id')),
+      );
       expect(find.text('رمز التحقق'), findsOneWidget);
     });
 
     testWidgets('sub title', (tester) async {
-      await tester.pumpWidget(buildTestApp(home: const VerificationView()));
+      await tester.pumpWidget(
+        buildTestApp(home: const VerificationView('test_verification_id')),
+      );
       expect(find.text('تم إرسال رمز من 4 أرقام '), findsOneWidget);
     });
     testWidgets('pinput field', (tester) async {
-      await tester.pumpWidget(buildTestApp(home: const VerificationView()));
+      await tester.pumpWidget(
+        buildTestApp(home: const VerificationView('test_verification_id')),
+      );
       expect(find.byType(Pinput), findsOneWidget);
     });
     testWidgets('button title', (tester) async {
-      await tester.pumpWidget(buildTestApp(home: const VerificationView()));
+      await tester.pumpWidget(
+        buildTestApp(home: const VerificationView('test_verification_id')),
+      );
       expect(find.text('تأكيد والدخول'), findsOneWidget);
     });
     testWidgets('Button', (tester) async {
-      await tester.pumpWidget(buildTestApp(home: const VerificationView()));
+      await tester.pumpWidget(
+        buildTestApp(home: const VerificationView('test_verification_id')),
+      );
       expect(find.byType(ElevatedButton), findsOneWidget);
     });
   });

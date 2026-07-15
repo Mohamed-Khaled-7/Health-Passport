@@ -10,8 +10,8 @@ import 'package:healthpassport/firebase_options.dart';
 import 'package:healthpassport/generated/l10n.dart';
 
 void main() async {
-  setup();
   WidgetsFlutterBinding.ensureInitialized();
+  setup();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const HealthPassport());
 }

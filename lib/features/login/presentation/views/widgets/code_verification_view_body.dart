@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthpassport/core/widgets/custom_snak_bar.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 import 'package:healthpassport/core/utils/app_routes.dart';
@@ -14,11 +15,9 @@ import 'package:healthpassport/features/login/presentation/views/widgets/phone_i
 import 'package:healthpassport/generated/l10n.dart';
 
 class CodeVerificationViewBody extends StatefulWidget {
-  final String verificationId; 
-  const CodeVerificationViewBody({
-    Key? key,
-    required this.verificationId,
-  }) : super(key: key);
+  final String verificationId;
+  const CodeVerificationViewBody({Key? key, required this.verificationId})
+    : super(key: key);
 
   @override
   State<CodeVerificationViewBody> createState() =>
@@ -41,9 +40,12 @@ class _CodeVerificationViewBodyState extends State<CodeVerificationViewBody> {
           GoRouter.of(context).push(AppRoutes.homeRoute);
         }
         if (state is LoginFailure) {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text(state.message)));
+          CustomSnakPar(
+            context: context,
+            message: state.message,
+            backgroundColor: Colors.red,
+            icons: Icons.error,
+          );
         }
       },
       builder: (context, state) {
@@ -99,9 +101,12 @@ class _CodeVerificationViewBodyState extends State<CodeVerificationViewBody> {
                           isLoading: state is LoginLoading,
                           isActive: otpController.text.length == 6,
                           onPressed: () {
-                            context
-                                .read<LoginBloc>()
-                                .add(VerifyOtpEvent(otp: otpController.text, verificationId: widget.verificationId));
+                            context.read<LoginBloc>().add(
+                              VerifyOtpEvent(
+                                otp: otpController.text,
+                                verificationId: widget.verificationId,
+                              ),
+                            );
                           },
                           title: S.of(context).confirmAndLogin,
                         ),

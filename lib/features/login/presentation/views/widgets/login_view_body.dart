@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthpassport/core/utils/app_routes.dart';
+import 'package:healthpassport/core/widgets/custom_snak_bar.dart';
 import 'package:healthpassport/features/login/presentation/cubit/bloc/login_bloc.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/convert_number_to_international.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/country_badge.dart';
@@ -41,9 +42,12 @@ class _LoginViewBodyState extends State<LoginViewBody> {
     return BlocConsumer<LoginBloc, LoginState>(
       listener: (context, state) {
         if (state is LoginFailure) {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text(state.message)));
+          CustomSnakPar(
+            context: context,
+            message: state.message,
+            backgroundColor: Colors.red,
+            icons: Icons.error,
+          );
         }
         if (state is OtpSentSuccess) {
           GoRouter.of(
@@ -52,9 +56,6 @@ class _LoginViewBodyState extends State<LoginViewBody> {
         }
       },
       builder: (context, state) {
-        if (state is LoginLoading) {
-          return const Center(child: CircularProgressIndicator());
-        }
         return SafeArea(
           child: SingleChildScrollView(
             child: Form(

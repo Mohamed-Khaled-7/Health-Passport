@@ -129,10 +129,10 @@ class S {
     );
   }
 
-  /// `A 4-digit verification code has been sent `
+  /// `A 6-digit verification code has been sent `
   String get verificationCodeSent {
     return Intl.message(
-      'A 4-digit verification code has been sent ',
+      'A 6-digit verification code has been sent ',
       name: 'verificationCodeSent',
       desc: '',
       args: [],
@@ -174,6 +174,86 @@ class S {
     return Intl.message(
       'Please enter a valid phone number',
       name: 'invalidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many requests. Please try again later`
+  String get tooManyRequests {
+    return Intl.message(
+      'Too many requests. Please try again later',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The SMS quota has been exceeded. Please try again later`
+  String get quotaExceeded {
+    return Intl.message(
+      'The SMS quota has been exceeded. Please try again later',
+      name: 'quotaExceeded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone authentication is currently unavailable`
+  String get operationNotAllowed {
+    return Intl.message(
+      'Phone authentication is currently unavailable',
+      name: 'operationNotAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification code is invalid`
+  String get invalidVerificationCode {
+    return Intl.message(
+      'The verification code is invalid',
+      name: 'invalidVerificationCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification session is invalid. Please try again`
+  String get invalidVerificationId {
+    return Intl.message(
+      'The verification session is invalid. Please try again',
+      name: 'invalidVerificationId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification code has expired. Please request a new code`
+  String get sessionExpired {
+    return Intl.message(
+      'The verification code has expired. Please request a new code',
+      name: 'sessionExpired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please check your internet connection and try again`
+  String get networkRequestFailed {
+    return Intl.message(
+      'Please check your internet connection and try again',
+      name: 'networkRequestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unexpected error occurred. Please try again`
+  String get unexpectedError {
+    return Intl.message(
+      'An unexpected error occurred. Please try again',
+      name: 'unexpectedError',
       desc: '',
       args: [],
     );

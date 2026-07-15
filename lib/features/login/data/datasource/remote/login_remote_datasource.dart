@@ -18,8 +18,8 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
   final FirebaseAuth firebaseAuth;
   LoginRemoteDataSourceImpl({required this.firebaseAuth});
   @override
-  Future<Either<Failure, String>> sendOtp({required String phoneNumber}) async   {
-    final completer = Completer<Either<Failure, String>>(); 
+  Future<Either<Failure, String>> sendOtp({required String phoneNumber}) async {
+    final completer = Completer<Either<Failure, String>>();
     try {
       await firebaseAuth.verifyPhoneNumber(
         phoneNumber: phoneNumber,
@@ -27,7 +27,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
         verificationFailed: (FirebaseAuthException error) {
           if (!completer.isCompleted) {
             completer.complete(
-              Left(FirebaseFailure(message: error.message ?? '')),
+              Left(FirebaseAuthFailure(errMessage: error.message ?? '')),
             );
           }
         },
@@ -40,7 +40,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
       );
       return await completer.future;
     } on FirebaseAuthException catch (e) {
-      return Left(FirebaseFailure(message: e.message ?? ''));
+      return Left(FirebaseAuthFailure(errMessage: e.message ?? ''));
     }
   }
 
@@ -58,7 +58,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
       await firebaseAuth.signInWithCredential(credential);
       return const Right(null);
     } on FirebaseAuthException catch (e) {
-      return Left(FirebaseFailure(message: e.message ?? ''));
+      return Left(FirebaseAuthFailure(errMessage: e.message ?? ''));
     }
   }
 }

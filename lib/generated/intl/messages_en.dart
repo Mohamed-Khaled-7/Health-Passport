@@ -38,19 +38,43 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid phone number",
     ),
+    "invalidVerificationCode": MessageLookupByLibrary.simpleMessage(
+      "The verification code is invalid",
+    ),
+    "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
+      "The verification session is invalid. Please try again",
+    ),
+    "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
+      "Please check your internet connection and try again",
+    ),
+    "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
+      "Phone authentication is currently unavailable",
+    ),
     "phoneHint": MessageLookupByLibrary.simpleMessage("01X XXXX XXXX"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage(
       "Please enter your phone number",
     ),
+    "quotaExceeded": MessageLookupByLibrary.simpleMessage(
+      "The SMS quota has been exceeded. Please try again later",
+    ),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "Send Verification Code",
+    ),
+    "sessionExpired": MessageLookupByLibrary.simpleMessage(
+      "The verification code has expired. Please request a new code",
+    ),
+    "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+      "Too many requests. Please try again later",
+    ),
+    "unexpectedError": MessageLookupByLibrary.simpleMessage(
+      "An unexpected error occurred. Please try again",
     ),
     "verificationCode": MessageLookupByLibrary.simpleMessage(
       "Verification Code",
     ),
     "verificationCodeSent": MessageLookupByLibrary.simpleMessage(
-      "A 4-digit verification code has been sent ",
+      "A 6-digit verification code has been sent ",
     ),
   };
 }

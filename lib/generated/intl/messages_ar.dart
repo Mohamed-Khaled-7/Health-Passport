@@ -34,17 +34,41 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال رقم هاتف صحيح",
     ),
+    "invalidVerificationCode": MessageLookupByLibrary.simpleMessage(
+      "رمز التحقق غير صحيح",
+    ),
+    "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
+      "جلسة التحقق غير صالحة. يرجى المحاولة مرة أخرى",
+    ),
+    "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
+      "يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى",
+    ),
+    "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول باستخدام رقم الهاتف غير متاح حاليًا",
+    ),
     "phoneHint": MessageLookupByLibrary.simpleMessage("01X XXXX XXXX"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال رقم الهاتف",
     ),
+    "quotaExceeded": MessageLookupByLibrary.simpleMessage(
+      "تم تجاوز الحد المسموح لإرسال رسائل التحقق. يرجى المحاولة لاحقًا",
+    ),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "إرسال رمز التحقق",
     ),
+    "sessionExpired": MessageLookupByLibrary.simpleMessage(
+      "انتهت صلاحية رمز التحقق. يرجى طلب رمز جديد",
+    ),
+    "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+      "تم إجراء محاولات كثيرة. يرجى المحاولة مرة أخرى لاحقًا",
+    ),
+    "unexpectedError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى",
+    ),
     "verificationCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
     "verificationCodeSent": MessageLookupByLibrary.simpleMessage(
-      "تم إرسال رمز من 4 أرقام ",
+      "تم إرسال رمز من 6 أرقام ",
     ),
   };
 }

@@ -8,9 +8,17 @@
     "countryCode": "+20",
     "changePhoneNumber": "Change Phone Number",
     "verificationCode": "Verification Code",
-    "verificationCodeSent": "A 4-digit verification code has been sent ",
+    "verificationCodeSent": "A 6-digit verification code has been sent ",
     "confirmAndLogin": "Confirm & Login",
     "invalidOtpError": "Invalid OTP code",
     "phoneNumberRequired": "Please enter your phone number",
-    "invalidPhoneNumber": "Please enter a valid phone number"
+    "invalidPhoneNumber": "Please enter a valid phone number",
+    "tooManyRequests": "Too many requests. Please try again later",
+    "quotaExceeded": "The SMS quota has been exceeded. Please try again later",
+    "operationNotAllowed": "Phone authentication is currently unavailable",
+    "invalidVerificationCode": "The verification code is invalid",
+    "invalidVerificationId": "The verification session is invalid. Please try again",
+    "sessionExpired": "The verification code has expired. Please request a new code",
+    "networkRequestFailed": "Please check your internet connection and try again",
+    "unexpectedError": "An unexpected error occurred. Please try again"
 }
