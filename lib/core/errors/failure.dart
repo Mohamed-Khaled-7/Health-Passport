@@ -16,7 +16,6 @@ class FirebaseAuthFailure extends Failure {
     switch (exception.code) {
       case 'invalid-phone-number':
         return FirebaseAuthFailure(errMessage: S.current.invalidPhoneNumber);
-
       case 'too-many-requests':
         return FirebaseAuthFailure(errMessage: S.current.tooManyRequests);
 

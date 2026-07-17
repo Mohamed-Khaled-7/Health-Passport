@@ -40,7 +40,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
       );
       return await completer.future;
     } on FirebaseAuthException catch (e) {
-      return Left(FirebaseAuthFailure(errMessage: e.message ?? ''));
+      return Left(FirebaseAuthFailure.fromFirebaseAuthException(e));
     }
   }
 
@@ -58,7 +58,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
       await firebaseAuth.signInWithCredential(credential);
       return const Right(null);
     } on FirebaseAuthException catch (e) {
-      return Left(FirebaseAuthFailure(errMessage: e.message ?? ''));
+      return Left(FirebaseAuthFailure.fromFirebaseAuthException(e));
     }
   }
 }

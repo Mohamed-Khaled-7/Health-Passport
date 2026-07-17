@@ -18,7 +18,7 @@ void CustomSnakPar({
             child: Expanded(
               child: Text(
                 message,
-                style: GoogleFonts.poppins(
+                style: GoogleFonts.cairo(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
                   fontSize: 15,
