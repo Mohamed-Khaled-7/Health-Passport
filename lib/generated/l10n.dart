@@ -258,6 +258,291 @@ class S {
       args: [],
     );
   }
+
+  /// `We'll use this to build your health record and show you relevant alerts`
+  String get onboardingBasicInfoSubtitle {
+    return Intl.message(
+      'We\'ll use this to build your health record and show you relevant alerts',
+      name: 'onboardingBasicInfoSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get onboardingFullNameLabel {
+    return Intl.message(
+      'Full Name',
+      name: 'onboardingFullNameLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `e.g. Mohamed Khaled`
+  String get onboardingFullNameHint {
+    return Intl.message(
+      'e.g. Mohamed Khaled',
+      name: 'onboardingFullNameHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age`
+  String get onboardingAgeLabel {
+    return Intl.message('Age', name: 'onboardingAgeLabel', desc: '', args: []);
+  }
+
+  /// `e.g. 24`
+  String get onboardingAgeHint {
+    return Intl.message(
+      'e.g. 24',
+      name: 'onboardingAgeHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blood Type`
+  String get onboardingBloodTypeLabel {
+    return Intl.message(
+      'Blood Type',
+      name: 'onboardingBloodTypeLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select blood type`
+  String get onboardingBloodTypeHint {
+    return Intl.message(
+      'Select blood type',
+      name: 'onboardingBloodTypeHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have a chronic condition?`
+  String get onboardingChronicDiseaseLabel {
+    return Intl.message(
+      'Do you have a chronic condition?',
+      name: 'onboardingChronicDiseaseLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select chronic condition`
+  String get onboardingChronicDiseaseHint {
+    return Intl.message(
+      'Select chronic condition',
+      name: 'onboardingChronicDiseaseHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `None`
+  String get onboardingChronicNoneOption {
+    return Intl.message(
+      'None',
+      name: 'onboardingChronicNoneOption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diabetes`
+  String get onboardingChronicDiabetesOption {
+    return Intl.message(
+      'Diabetes',
+      name: 'onboardingChronicDiabetesOption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blood Pressure`
+  String get onboardingChronicBloodPressureOption {
+    return Intl.message(
+      'Blood Pressure',
+      name: 'onboardingChronicBloodPressureOption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Heart Disease`
+  String get onboardingChronicHeartOption {
+    return Intl.message(
+      'Heart Disease',
+      name: 'onboardingChronicHeartOption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Your Record`
+  String get onboardingStartButtonLabel {
+    return Intl.message(
+      'Start Your Record',
+      name: 'onboardingStartButtonLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share`
+  String get bottomNavShareLabel {
+    return Intl.message(
+      'Share',
+      name: 'bottomNavShareLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Meds`
+  String get bottomNavMedicationsLabel {
+    return Intl.message(
+      'My Meds',
+      name: 'bottomNavMedicationsLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get bottomNavHomeLabel {
+    return Intl.message('Home', name: 'bottomNavHomeLabel', desc: '', args: []);
+  }
+
+  /// `You don't have permission to perform this action`
+  String get permissionDenied {
+    return Intl.message(
+      'You don\'t have permission to perform this action',
+      name: 'permissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The requested data was not found`
+  String get notFound {
+    return Intl.message(
+      'The requested data was not found',
+      name: 'notFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service is currently unavailable. Please try again later`
+  String get serviceUnavailable {
+    return Intl.message(
+      'Service is currently unavailable. Please try again later',
+      name: 'serviceUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connection timed out. Please check your internet`
+  String get connectionTimeout {
+    return Intl.message(
+      'Connection timed out. Please check your internet',
+      name: 'connectionTimeout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This record already exists`
+  String get alreadyExists {
+    return Intl.message(
+      'This record already exists',
+      name: 'alreadyExists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You must be logged in to perform this action`
+  String get unauthenticated {
+    return Intl.message(
+      'You must be logged in to perform this action',
+      name: 'unauthenticated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Request was cancelled`
+  String get requestCancelled {
+    return Intl.message(
+      'Request was cancelled',
+      name: 'requestCancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message('Full Name', name: 'fullName', desc: '', args: []);
+  }
+
+  /// `Age`
+  String get age {
+    return Intl.message('Age', name: 'age', desc: '', args: []);
+  }
+
+  /// ` Blood Type`
+  String get bloodType {
+    return Intl.message(' Blood Type', name: 'bloodType', desc: '', args: []);
+  }
+
+  /// `ChronicDisease`
+  String get chronicDisease {
+    return Intl.message(
+      'ChronicDisease',
+      name: 'chronicDisease',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose blood type`
+  String get bloodtype {
+    return Intl.message(
+      'Choose blood type',
+      name: 'bloodtype',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Information`
+  String get onboardingBasicInfoTitle {
+    return Intl.message(
+      'Enter Your Information',
+      name: 'onboardingBasicInfoTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logged in successfully`
+  String get oboardingsavesuccess {
+    return Intl.message(
+      'Logged in successfully',
+      name: 'oboardingsavesuccess',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

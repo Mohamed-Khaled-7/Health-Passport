@@ -22,18 +22,34 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "age": MessageLookupByLibrary.simpleMessage("Age"),
+    "alreadyExists": MessageLookupByLibrary.simpleMessage(
+      "This record already exists",
+    ),
     "appName": MessageLookupByLibrary.simpleMessage("Health Passport"),
     "appTagline": MessageLookupByLibrary.simpleMessage(
       "Your medical record is always with you",
     ),
+    "bloodType": MessageLookupByLibrary.simpleMessage(" Blood Type"),
+    "bloodtype": MessageLookupByLibrary.simpleMessage("Choose blood type"),
+    "bottomNavHomeLabel": MessageLookupByLibrary.simpleMessage("Home"),
+    "bottomNavMedicationsLabel": MessageLookupByLibrary.simpleMessage(
+      "My Meds",
+    ),
+    "bottomNavShareLabel": MessageLookupByLibrary.simpleMessage("Share"),
     "changePhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Change Phone Number",
     ),
+    "chronicDisease": MessageLookupByLibrary.simpleMessage("ChronicDisease"),
     "confirmAndLogin": MessageLookupByLibrary.simpleMessage("Confirm & Login"),
+    "connectionTimeout": MessageLookupByLibrary.simpleMessage(
+      "Connection timed out. Please check your internet",
+    ),
     "countryCode": MessageLookupByLibrary.simpleMessage("+20"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Enter your phone number",
     ),
+    "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
     "invalidOtpError": MessageLookupByLibrary.simpleMessage("Invalid OTP code"),
     "invalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid phone number",
@@ -47,8 +63,55 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "Please check your internet connection and try again",
     ),
+    "notFound": MessageLookupByLibrary.simpleMessage(
+      "The requested data was not found",
+    ),
+    "oboardingsavesuccess": MessageLookupByLibrary.simpleMessage(
+      "Logged in successfully",
+    ),
+    "onboardingAgeHint": MessageLookupByLibrary.simpleMessage("e.g. 24"),
+    "onboardingAgeLabel": MessageLookupByLibrary.simpleMessage("Age"),
+    "onboardingBasicInfoSubtitle": MessageLookupByLibrary.simpleMessage(
+      "We\'ll use this to build your health record and show you relevant alerts",
+    ),
+    "onboardingBasicInfoTitle": MessageLookupByLibrary.simpleMessage(
+      "Enter Your Information",
+    ),
+    "onboardingBloodTypeHint": MessageLookupByLibrary.simpleMessage(
+      "Select blood type",
+    ),
+    "onboardingBloodTypeLabel": MessageLookupByLibrary.simpleMessage(
+      "Blood Type",
+    ),
+    "onboardingChronicBloodPressureOption":
+        MessageLookupByLibrary.simpleMessage("Blood Pressure"),
+    "onboardingChronicDiabetesOption": MessageLookupByLibrary.simpleMessage(
+      "Diabetes",
+    ),
+    "onboardingChronicDiseaseHint": MessageLookupByLibrary.simpleMessage(
+      "Select chronic condition",
+    ),
+    "onboardingChronicDiseaseLabel": MessageLookupByLibrary.simpleMessage(
+      "Do you have a chronic condition?",
+    ),
+    "onboardingChronicHeartOption": MessageLookupByLibrary.simpleMessage(
+      "Heart Disease",
+    ),
+    "onboardingChronicNoneOption": MessageLookupByLibrary.simpleMessage("None"),
+    "onboardingFullNameHint": MessageLookupByLibrary.simpleMessage(
+      "e.g. Mohamed Khaled",
+    ),
+    "onboardingFullNameLabel": MessageLookupByLibrary.simpleMessage(
+      "Full Name",
+    ),
+    "onboardingStartButtonLabel": MessageLookupByLibrary.simpleMessage(
+      "Start Your Record",
+    ),
     "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
       "Phone authentication is currently unavailable",
+    ),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage(
+      "You don\'t have permission to perform this action",
     ),
     "phoneHint": MessageLookupByLibrary.simpleMessage("01X XXXX XXXX"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
@@ -58,14 +121,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "quotaExceeded": MessageLookupByLibrary.simpleMessage(
       "The SMS quota has been exceeded. Please try again later",
     ),
+    "requestCancelled": MessageLookupByLibrary.simpleMessage(
+      "Request was cancelled",
+    ),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "Send Verification Code",
+    ),
+    "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Service is currently unavailable. Please try again later",
     ),
     "sessionExpired": MessageLookupByLibrary.simpleMessage(
       "The verification code has expired. Please request a new code",
     ),
     "tooManyRequests": MessageLookupByLibrary.simpleMessage(
       "Too many requests. Please try again later",
+    ),
+    "unauthenticated": MessageLookupByLibrary.simpleMessage(
+      "You must be logged in to perform this action",
     ),
     "unexpectedError": MessageLookupByLibrary.simpleMessage(
       "An unexpected error occurred. Please try again",

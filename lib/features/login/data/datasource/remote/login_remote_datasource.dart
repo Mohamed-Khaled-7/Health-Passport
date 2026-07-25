@@ -3,12 +3,13 @@ import 'dart:async';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 import 'package:healthpassport/core/errors/failure.dart';
 
 abstract class LoginRemoteDataSource {
   Future<Either<Failure, String>> sendOtp({required String phoneNumber});
-  Future<Either<Failure, void>> verifyOtp({
+  Future<Either<Failure, User>> verifyOtp({
     required String verificationId,
     required String otp,
   });
@@ -32,6 +33,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
           }
         },
         codeSent: (String verificationId, int? resendToken) {
+          debugPrint("CODE SENT: $verificationId");
           if (!completer.isCompleted) {
             completer.complete(Right(verificationId));
           }
@@ -45,19 +47,25 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
   }
 
   @override
-  Future<Either<Failure, void>> verifyOtp({
+  Future<Either<Failure, User>> verifyOtp({
     required String verificationId,
     required String otp,
   }) async {
     try {
+      debugPrint("VERIFY ID: $verificationId");
+      debugPrint("OTP: $otp");
       final credential = PhoneAuthProvider.credential(
         verificationId: verificationId,
         smsCode: otp,
       );
 
-      await firebaseAuth.signInWithCredential(credential);
-      return const Right(null);
+      final userCredential = await firebaseAuth.signInWithCredential(
+        credential,
+      );
+      return Right(userCredential.user!);
     } on FirebaseAuthException catch (e) {
+      debugPrint("CODE: ${e.code}");
+      debugPrint("MESSAGE: ${e.message}");
       return Left(FirebaseAuthFailure.fromFirebaseAuthException(e));
     }
   }

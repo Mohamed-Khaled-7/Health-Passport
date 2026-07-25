@@ -3,15 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/validate_phone_number.dart';
 import 'package:healthpassport/generated/l10n.dart';
 
-class PhoneTextField extends StatelessWidget {
+class CustomPhoneTextField extends StatelessWidget {
+  final String hint;
+  final int h;
+  final int w;
   final TextEditingController controller;
-  const PhoneTextField({Key? key, required this.controller}) : super(key: key);
-
+  const CustomPhoneTextField({
+    Key? key,
+    required this.hint,
+    required this.h,
+    required this.w,
+    required this.controller,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,10 +31,7 @@ class PhoneTextField extends StatelessWidget {
             invalidPhoneNumber: S.of(context).invalidPhoneNumber,
           );
         },
-        inputFormatters: [
-          FilteringTextInputFormatter.digitsOnly,
-          LengthLimitingTextInputFormatter(11),
-        ],
+        inputFormatters: [LengthLimitingTextInputFormatter(11)],
         controller: controller,
         keyboardType: TextInputType.phone,
         textDirection: TextDirection.ltr,
@@ -36,12 +40,9 @@ class PhoneTextField extends StatelessWidget {
         style: GoogleFonts.cairo(fontSize: 20.sp, color: AppColors.ink),
         decoration: InputDecoration(
           counterText: '',
-          hintText: S.of(context).phoneHint,
+          hintText: hint,
           hintStyle: GoogleFonts.cairo(color: AppColors.muted, fontSize: 18.sp),
-          contentPadding: EdgeInsets.symmetric(
-            horizontal: 20.w,
-            vertical: 16.h,
-          ),
+          contentPadding: EdgeInsets.symmetric(horizontal: w.w, vertical: h.h),
 
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.r),

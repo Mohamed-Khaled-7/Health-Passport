@@ -44,3 +44,31 @@ class FirebaseAuthFailure extends Failure {
     }
   }
 }
+class FirestoreFailure extends Failure {
+  const FirestoreFailure({required super.errMessage});
+
+  factory FirestoreFailure.fromFirebaseException(FirebaseException e) {
+    switch (e.code) {
+      case 'permission-denied':
+        return FirestoreFailure(errMessage: S.current.permissionDenied);
+      case 'not-found':
+        return FirestoreFailure(errMessage: S.current.notFound);
+      case 'unavailable':
+        return FirestoreFailure(errMessage: S.current.serviceUnavailable);
+      case 'deadline-exceeded':
+        return FirestoreFailure(errMessage: S.current.connectionTimeout);
+      case 'network-request-failed':
+        return FirestoreFailure(errMessage: S.current.networkRequestFailed);
+      case 'already-exists':
+        return FirestoreFailure(errMessage: S.current.alreadyExists);
+      case 'unauthenticated':
+        return FirestoreFailure(errMessage: S.current.unauthenticated);
+      case 'cancelled':
+        return FirestoreFailure(errMessage: S.current.requestCancelled);
+      case 'data-loss':
+        return FirestoreFailure(errMessage: S.current.unexpectedError);
+      default:
+        return FirestoreFailure(errMessage: S.current.unexpectedError);
+    }
+  }
+}

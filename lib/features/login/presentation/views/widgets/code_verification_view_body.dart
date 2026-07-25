@@ -37,7 +37,7 @@ class _CodeVerificationViewBodyState extends State<CodeVerificationViewBody> {
     return BlocConsumer<LoginBloc, LoginState>(
       listener: (context, state) {
         if (state is VerifyOtpSuccess) {
-          GoRouter.of(context).push(AppRoutes.homeRoute);
+          GoRouter.of(context).push(AppRoutes.onBoardingRoute);
         }
         if (state is LoginFailure) {
           CustomSnakPar(

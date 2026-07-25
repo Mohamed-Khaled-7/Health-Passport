@@ -3,11 +3,11 @@ import 'package:healthpassport/core/baseusecase/base_usecase.dart';
 import 'package:healthpassport/core/errors/failure.dart';
 import 'package:healthpassport/features/login/domain/repo/login_repo.dart';
 
-class SentOtpUseCase implements BaseUseCase<void, String> {
+class SendOtpUseCase implements BaseUseCase<void, String> {
   final LoginRepo loginRepo;
-  SentOtpUseCase({required this.loginRepo});
+  SendOtpUseCase({required this.loginRepo});
   @override
-  Future<Either<Failure, String>> call(String number) async {
-    return await loginRepo.sendOtp(phoneNumber: number);
+  Future<Either<Failure, String>> call(String input) async {
+    return await loginRepo.sendOtp(phoneNumber: input);
   }
 }

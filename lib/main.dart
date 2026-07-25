@@ -6,12 +6,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/core/utils/get_it.dart';
 import 'package:healthpassport/features/login/presentation/cubit/bloc/login_bloc.dart';
+import 'package:healthpassport/features/onboarding/presentation/cubit/bloc/onboarding_bloc.dart';
 import 'package:healthpassport/firebase_options.dart';
 import 'package:healthpassport/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const HealthPassport());
   setup();
@@ -21,8 +21,11 @@ class HealthPassport extends StatelessWidget {
   const HealthPassport({super.key});
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => gitIt<LoginBloc>(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => gitIt<LoginBloc>()),
+        BlocProvider(create: (context) => gitIt<OnboardingBloc>()),
+      ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,

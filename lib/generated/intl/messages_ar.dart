@@ -22,14 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "age": MessageLookupByLibrary.simpleMessage("السن"),
+    "alreadyExists": MessageLookupByLibrary.simpleMessage(
+      "هذا السجل موجود بالفعل",
+    ),
     "appName": MessageLookupByLibrary.simpleMessage("الجواز الصحي"),
     "appTagline": MessageLookupByLibrary.simpleMessage(
       "سجلك الطبي معاك دائمًا",
     ),
+    "bloodType": MessageLookupByLibrary.simpleMessage("فصيلة الدم"),
+    "bloodtype": MessageLookupByLibrary.simpleMessage("اختر فصيله الدم"),
+    "bottomNavHomeLabel": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "bottomNavMedicationsLabel": MessageLookupByLibrary.simpleMessage("أدويتي"),
+    "bottomNavShareLabel": MessageLookupByLibrary.simpleMessage("مشاركة"),
     "changePhoneNumber": MessageLookupByLibrary.simpleMessage("تغيير الرقم"),
+    "chronicDisease": MessageLookupByLibrary.simpleMessage("حالة مزمنة"),
     "confirmAndLogin": MessageLookupByLibrary.simpleMessage("تأكيد والدخول"),
+    "connectionTimeout": MessageLookupByLibrary.simpleMessage(
+      "انتهت مهلة الاتصال. تحقق من الإنترنت",
+    ),
     "countryCode": MessageLookupByLibrary.simpleMessage("+20"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage("أدخل رقم الهاتف"),
+    "fullName": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
     "invalidOtpError": MessageLookupByLibrary.simpleMessage("رمز غير صحيح"),
     "invalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال رقم هاتف صحيح",
@@ -43,8 +57,57 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى",
     ),
+    "notFound": MessageLookupByLibrary.simpleMessage(
+      "البيانات المطلوبة غير موجودة",
+    ),
+    "oboardingsavesuccess": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الدخول بنجاح",
+    ),
+    "onboardingAgeHint": MessageLookupByLibrary.simpleMessage("مثال: 24"),
+    "onboardingAgeLabel": MessageLookupByLibrary.simpleMessage("السن"),
+    "onboardingBasicInfoSubtitle": MessageLookupByLibrary.simpleMessage(
+      "هنستخدمها لنبني سجلك الصحي ونوريك تنبيهات مناسبة ليك",
+    ),
+    "onboardingBasicInfoTitle": MessageLookupByLibrary.simpleMessage(
+      "سجل بياناتك",
+    ),
+    "onboardingBloodTypeHint": MessageLookupByLibrary.simpleMessage(
+      "اختر فصيلة الدم",
+    ),
+    "onboardingBloodTypeLabel": MessageLookupByLibrary.simpleMessage(
+      "فصيلة الدم",
+    ),
+    "onboardingChronicBloodPressureOption":
+        MessageLookupByLibrary.simpleMessage("ضغط الدم"),
+    "onboardingChronicDiabetesOption": MessageLookupByLibrary.simpleMessage(
+      "السكر",
+    ),
+    "onboardingChronicDiseaseHint": MessageLookupByLibrary.simpleMessage(
+      "اختر الحالة المزمنة",
+    ),
+    "onboardingChronicDiseaseLabel": MessageLookupByLibrary.simpleMessage(
+      "هل عندك حالة مزمنة؟",
+    ),
+    "onboardingChronicHeartOption": MessageLookupByLibrary.simpleMessage(
+      "القلب",
+    ),
+    "onboardingChronicNoneOption": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد",
+    ),
+    "onboardingFullNameHint": MessageLookupByLibrary.simpleMessage(
+      "مثال: محمد خالد",
+    ),
+    "onboardingFullNameLabel": MessageLookupByLibrary.simpleMessage(
+      "الاسم بالكامل",
+    ),
+    "onboardingStartButtonLabel": MessageLookupByLibrary.simpleMessage(
+      "ابدأ سجلك",
+    ),
     "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول باستخدام رقم الهاتف غير متاح حاليًا",
+    ),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage(
+      "ليس لديك صلاحية لتنفيذ هذا الإجراء",
     ),
     "phoneHint": MessageLookupByLibrary.simpleMessage("01X XXXX XXXX"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
@@ -54,14 +117,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "quotaExceeded": MessageLookupByLibrary.simpleMessage(
       "تم تجاوز الحد المسموح لإرسال رسائل التحقق. يرجى المحاولة لاحقًا",
     ),
+    "requestCancelled": MessageLookupByLibrary.simpleMessage("تم إلغاء الطلب"),
     "sendVerificationCode": MessageLookupByLibrary.simpleMessage(
       "إرسال رمز التحقق",
+    ),
+    "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
+      "الخدمة غير متاحة حالياً. حاول مرة أخرى لاحقاً",
     ),
     "sessionExpired": MessageLookupByLibrary.simpleMessage(
       "انتهت صلاحية رمز التحقق. يرجى طلب رمز جديد",
     ),
     "tooManyRequests": MessageLookupByLibrary.simpleMessage(
       "تم إجراء محاولات كثيرة. يرجى المحاولة مرة أخرى لاحقًا",
+    ),
+    "unauthenticated": MessageLookupByLibrary.simpleMessage(
+      "يجب تسجيل الدخول أولاً لتنفيذ هذا الإجراء",
     ),
     "unexpectedError": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى",

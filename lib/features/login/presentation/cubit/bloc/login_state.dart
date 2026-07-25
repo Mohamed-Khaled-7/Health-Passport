@@ -11,7 +11,11 @@ final class OtpSentSuccess extends LoginState {
   OtpSentSuccess({required this.verificationId});
 }
 
-final class VerifyOtpSuccess extends LoginState {}
+final class VerifyOtpSuccess extends LoginState {
+  final User user;
+
+  VerifyOtpSuccess({required this.user});
+}
 
 final class LoginFailure extends LoginState {
   final String message;

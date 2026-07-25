@@ -10,7 +10,7 @@ import 'package:healthpassport/features/login/presentation/views/widgets/convert
 import 'package:healthpassport/features/login/presentation/views/widgets/country_badge.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/login_button.dart';
 import 'package:healthpassport/features/login/presentation/views/widgets/phone_icon.dart';
-import 'package:healthpassport/features/login/presentation/views/widgets/phone_text_field.dart';
+import 'package:healthpassport/features/login/presentation/views/widgets/custom_phone_text_field.dart';
 import 'package:healthpassport/generated/l10n.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
@@ -77,7 +77,14 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   Row(
                     textDirection: TextDirection.ltr,
                     children: [
-                      Expanded(child: PhoneTextField(controller: controller)),
+                      Expanded(
+                        child: CustomPhoneTextField(
+                          hint: S.of(context).phoneNumber,
+                          controller: controller,
+                          h: 20,
+                          w: 10,
+                        ),
+                      ),
                       Padding(
                         padding: EdgeInsets.only(top: 20.h, right: 20.w),
                         child: CountryBadge(),
