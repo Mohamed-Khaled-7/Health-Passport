@@ -51,5 +51,15 @@
     "chronicDisease": "ChronicDisease",
     "bloodtype": "Choose blood type",
     "onboardingBasicInfoTitle": "Enter Your Information",
-    "oboardingsavesuccess": "Logged in successfully"
+    "oboardingsavesuccess": "Logged in successfully",
+    "createAccount": "Create New Account",
+    "alreadyHaveAccount": "I already have an account",
+    "welcomeFeature1Title": "Track every medical visit",
+    "welcomeFeature1Sub": "Your prescriptions and diagnoses in one place",
+    "welcomeFeature2Title": "Daily medication reminder",
+    "welcomeFeature2Sub": "Never miss your dose again",
+    "welcomeFeature3Title": "Share with your doctor instantly",
+    "welcomeFeature3Sub": "Any doctor you visit sees your full record",
+    "welcomeFeature4Title": "Your data is protected",
+    "welcomeFeature4Sub": "You're in full control"
 }

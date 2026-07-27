@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:healthpassport/core/widgets/custom_snak_bar.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
@@ -43,7 +44,7 @@ class _CodeVerificationViewBodyState extends State<CodeVerificationViewBody> {
           CustomSnakPar(
             context: context,
             message: state.message,
-            backgroundColor: Colors.red,
+            backgroundColor: AppColors.coral,
             icons: Icons.error,
           );
         }

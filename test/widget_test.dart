@@ -30,9 +30,7 @@ Widget buildTestApp({required Widget home}) {
 
 void main() {
   testWidgets('Health Passport', (tester) async {
-    //هنا اول حاجه هنشغل الابليكيشن
     await tester.pumpWidget(const HealthPassport());
-    // بعد كدا هندور علي التكست
     expect(find.text('سجلك الطبي معاك دايماً'), findsOneWidget);
   });
   testWidgets('after 2 seconds go to login', (tester) async {
@@ -103,5 +101,7 @@ void main() {
       );
       expect(find.byType(ElevatedButton), findsOneWidget);
     });
+    
   });
+  
 }

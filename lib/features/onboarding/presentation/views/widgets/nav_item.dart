@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'app_colors.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 
 class NavItem extends StatelessWidget {
   final IconData icon;

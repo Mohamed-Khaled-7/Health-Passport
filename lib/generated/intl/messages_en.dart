@@ -26,6 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyExists": MessageLookupByLibrary.simpleMessage(
       "This record already exists",
     ),
+    "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "I already have an account",
+    ),
     "appName": MessageLookupByLibrary.simpleMessage("Health Passport"),
     "appTagline": MessageLookupByLibrary.simpleMessage(
       "Your medical record is always with you",
@@ -46,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Connection timed out. Please check your internet",
     ),
     "countryCode": MessageLookupByLibrary.simpleMessage("+20"),
+    "createAccount": MessageLookupByLibrary.simpleMessage("Create New Account"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Enter your phone number",
     ),
@@ -147,6 +151,30 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "verificationCodeSent": MessageLookupByLibrary.simpleMessage(
       "A 6-digit verification code has been sent ",
+    ),
+    "welcomeFeature1Sub": MessageLookupByLibrary.simpleMessage(
+      "Your prescriptions and diagnoses in one place",
+    ),
+    "welcomeFeature1Title": MessageLookupByLibrary.simpleMessage(
+      "Track every medical visit",
+    ),
+    "welcomeFeature2Sub": MessageLookupByLibrary.simpleMessage(
+      "Never miss your dose again",
+    ),
+    "welcomeFeature2Title": MessageLookupByLibrary.simpleMessage(
+      "Daily medication reminder",
+    ),
+    "welcomeFeature3Sub": MessageLookupByLibrary.simpleMessage(
+      "Any doctor you visit sees your full record",
+    ),
+    "welcomeFeature3Title": MessageLookupByLibrary.simpleMessage(
+      "Share with your doctor instantly",
+    ),
+    "welcomeFeature4Sub": MessageLookupByLibrary.simpleMessage(
+      "You\'re in full control",
+    ),
+    "welcomeFeature4Title": MessageLookupByLibrary.simpleMessage(
+      "Your data is protected",
     ),
   };
 }

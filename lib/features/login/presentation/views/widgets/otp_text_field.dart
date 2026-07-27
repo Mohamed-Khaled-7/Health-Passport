@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpTextField extends StatelessWidget {
@@ -16,12 +17,12 @@ class OtpTextField extends StatelessWidget {
       textStyle: TextStyle(
         fontSize: 22.sp,
         fontWeight: FontWeight.w600,
-        color: Colors.black,
+        color: AppColors.ink,
       ),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.card,
         borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: Colors.grey.shade300, width: 1.5),
+        border: Border.all(color: AppColors.borderGrey, width: 1.5),
       ),
     );
 
@@ -32,7 +33,7 @@ class OtpTextField extends StatelessWidget {
       defaultPinTheme: defaultPinTheme,
 
       focusedPinTheme: defaultPinTheme.copyDecorationWith(
-        border: Border.all(color: const Color(0xffA6DDD0), width: 2),
+        border: Border.all(color: AppColors.lightGreenBg, width: 2),
       ),
 
       submittedPinTheme: defaultPinTheme,

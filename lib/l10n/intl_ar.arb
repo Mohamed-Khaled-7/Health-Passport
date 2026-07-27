@@ -1,6 +1,6 @@
 {
     "appName": "الجواز الصحي",
-    "appTagline": "سجلك الطبي معاك دائمًا",
+    "appTagline": "سجلك الطبي معاك دايمًا",
     "enterPhoneNumber": "أدخل رقم الهاتف",
     "phoneNumber": "رقم الهاتف",
     "phoneHint": "01X XXXX XXXX",
@@ -52,5 +52,16 @@
     "bloodType": "فصيلة الدم",
     "chronicDisease": "حالة مزمنة",
     "bloodtype": "اختر فصيله الدم",
-    "oboardingsavesuccess": "تم تسجيل الدخول بنجاح"
+    "oboardingsavesuccess": "تم تسجيل الدخول بنجاح",
+    "createAccount": "إنشاء حساب جديد",
+    "alreadyHaveAccount": "عندي حساب — تسجيل الدخول",
+    
+    "welcomeFeature1Title": "سجل كل زيارة طبية",
+    "welcomeFeature1Sub": "روشتاتك وتشخيصاتك في مكان واحد",
+    "welcomeFeature2Title": "تذكير دواء يومي",
+    "welcomeFeature2Sub": "مش هتنسى جرعتك تاني",
+    "welcomeFeature3Title": "شارك مع الطبيب في ثانية",
+    "welcomeFeature3Sub": "أي طبيب تروحله يشوف سجلك كامل",
+    "welcomeFeature4Title": "بياناتك محمية",
+    "welcomeFeature4Sub": "بتتحكم فيها أنت بس"
 }

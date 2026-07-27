@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:healthpassport/features/splash/presentation/views/widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
@@ -7,7 +8,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1D9E75),
+      backgroundColor: AppColors.primaryGreen,
       body: SplashViewBody(),
     );
   }

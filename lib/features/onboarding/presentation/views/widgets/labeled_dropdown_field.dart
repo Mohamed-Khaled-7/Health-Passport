@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'app_colors.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 import 'dropdown_option.dart';
 
 class LabeledDropdownField extends StatelessWidget {

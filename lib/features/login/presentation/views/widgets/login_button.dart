@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({
@@ -13,9 +14,10 @@ class LoginButton extends StatelessWidget {
   }) : super(key: key);
 
   final VoidCallback onPressed;
-  final isActive;
+  final bool isActive;
   final String title;
   final bool isLoading;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,8 +29,8 @@ class LoginButton extends StatelessWidget {
           onPressed: isActive && !isLoading ? onPressed : null,
           style: ElevatedButton.styleFrom(
             backgroundColor: isActive
-                ? const Color(0xFF1D9E75)
-                : const Color(0xFFA6DCCF),
+                ? AppColors.primaryGreen
+                : AppColors.lightGreenBg,
             foregroundColor: Colors.white,
             elevation: 0,
             shape: RoundedRectangleBorder(

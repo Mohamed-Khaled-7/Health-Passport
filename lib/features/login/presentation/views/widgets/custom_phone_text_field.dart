@@ -46,7 +46,7 @@ class CustomPhoneTextField extends StatelessWidget {
 
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.r),
-            borderSide: BorderSide(color: Colors.grey, width: 1.5.w),
+            borderSide: BorderSide(color: AppColors.muted, width: 1.5.w),
           ),
 
           focusedBorder: OutlineInputBorder(

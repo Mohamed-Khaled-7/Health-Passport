@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'app_colors.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 
 class TitleSection extends StatelessWidget {
   final String title;

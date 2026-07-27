@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthpassport/core/service/onboarding_service.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/features/splash/presentation/views/widgets/splash_container.dart';
 import 'package:healthpassport/generated/l10n.dart';
@@ -22,7 +25,14 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void navigateToNextScreen() {
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
-      context.go(AppRoutes.loginRoute);
+
+      final isLoggedIn = FirebaseAuth.instance.currentUser != null;
+      final isOnboarding = HiveOnboardingService().isOnboarding();
+      if (isLoggedIn && isOnboarding) {
+        GoRouter.of(context).go(AppRoutes.homeRoute);
+      } else {
+        GoRouter.of(context).go(AppRoutes.welcomeRoute);
+      }
     });
   }
 
@@ -37,12 +47,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           style: GoogleFonts.cairo(
             fontSize: 24,
             fontWeight: FontWeight.w700,
-            color: Colors.white,
+            color: AppColors.card,
           ),
         ),
         Text(
           S.of(context).appTagline,
-          style: GoogleFonts.cairo(fontSize: 18, color: Colors.white),
+          style: GoogleFonts.cairo(fontSize: 18, color: AppColors.card),
         ),
       ],
     );

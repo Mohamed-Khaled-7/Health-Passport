@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:healthpassport/core/constant/app_keys.dart';
+import 'package:healthpassport/core/service/onboarding_service.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
+import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/core/widgets/custom_snak_bar.dart';
 import 'package:healthpassport/core/widgets/custom_text_field.dart';
 import 'package:healthpassport/features/onboarding/domain/entity/patient_entity.dart';
@@ -37,6 +42,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   @override
   Widget build(BuildContext context) {
     final s = S.of(context);
+
     final bloodTypes = <DropdownOption>[
       const DropdownOption(label: 'A+', value: 'A+'),
       const DropdownOption(label: 'A-', value: 'A-'),
@@ -47,6 +53,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
       const DropdownOption(label: 'AB+', value: 'AB+'),
       const DropdownOption(label: 'AB-', value: 'AB-'),
     ];
+    final getIt = HiveOnboardingService().box;
 
     final chronicDiseases = <DropdownOption>[
       DropdownOption(label: s.onboardingChronicNoneOption, value: 'none'),
@@ -67,22 +74,25 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           CustomSnakPar(
             context: context,
             message: s.oboardingsavesuccess,
-            backgroundColor: Colors.green,
+            backgroundColor: AppColors.primaryGreen,
             icons: Icons.done,
           );
+          getIt.put(AppKeys.onboardingKey, true);
+          GoRouter.of(context).go(AppRoutes.homeRoute);
         }
+
         if (state is SavePatientFailure) {
           CustomSnakPar(
             context: context,
             message: state.message,
-            backgroundColor: Colors.red,
+            backgroundColor: AppColors.coral,
             icons: Icons.error,
           );
         }
       },
       builder: (context, state) {
         return Scaffold(
-          backgroundColor: Colors.white,
+          backgroundColor: AppColors.card,
           body: Form(
             key: formKey,
             child: SafeArea(
@@ -94,7 +104,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     const SizedBox(height: 20),
                     const AvatarIcon(),
                     const SizedBox(height: 20),
-
                     Center(
                       child: TitleSection(title: s.onboardingBasicInfoTitle),
                     ),
@@ -116,6 +125,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                         if (!nameRegex.hasMatch(value.trim())) {
                           return 'Name contains invalid characters';
                         }
+
                         return null;
                       },
                       label: s.fullName,
@@ -125,7 +135,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                       controller: namecontroller,
                     ),
                     const SizedBox(height: 6),
-
                     CustomTextField(
                       validator: (value) {
                         if (value == null || value.trim().isEmpty) {
@@ -176,14 +185,15 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                       label: s.onboardingStartButtonLabel,
                       onPressed: () {
                         if (!formKey.currentState!.validate()) return;
+
                         context.read<OnboardingBloc>().add(
                           SavePatientEvent(
-                            patient: (PatientEntity(
+                            patient: PatientEntity(
                               name: namecontroller.text,
                               age: int.parse(agecontroller.text),
                               bloodType: _selectedBloodType!,
                               chronicDisease: _selectedChronicDisease!,
-                            )),
+                            ),
                           ),
                         );
                       },

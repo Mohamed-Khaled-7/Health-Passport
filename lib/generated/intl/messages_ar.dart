@@ -26,9 +26,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyExists": MessageLookupByLibrary.simpleMessage(
       "هذا السجل موجود بالفعل",
     ),
+    "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "عندي حساب — تسجيل الدخول",
+    ),
     "appName": MessageLookupByLibrary.simpleMessage("الجواز الصحي"),
     "appTagline": MessageLookupByLibrary.simpleMessage(
-      "سجلك الطبي معاك دائمًا",
+      "سجلك الطبي معاك دايمًا",
     ),
     "bloodType": MessageLookupByLibrary.simpleMessage("فصيلة الدم"),
     "bloodtype": MessageLookupByLibrary.simpleMessage("اختر فصيله الدم"),
@@ -42,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "انتهت مهلة الاتصال. تحقق من الإنترنت",
     ),
     "countryCode": MessageLookupByLibrary.simpleMessage("+20"),
+    "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "enterPhoneNumber": MessageLookupByLibrary.simpleMessage("أدخل رقم الهاتف"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
     "invalidOtpError": MessageLookupByLibrary.simpleMessage("رمز غير صحيح"),
@@ -139,6 +143,30 @@ class MessageLookup extends MessageLookupByLibrary {
     "verificationCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
     "verificationCodeSent": MessageLookupByLibrary.simpleMessage(
       "تم إرسال رمز من 6 أرقام ",
+    ),
+    "welcomeFeature1Sub": MessageLookupByLibrary.simpleMessage(
+      "روشتاتك وتشخيصاتك في مكان واحد",
+    ),
+    "welcomeFeature1Title": MessageLookupByLibrary.simpleMessage(
+      "سجل كل زيارة طبية",
+    ),
+    "welcomeFeature2Sub": MessageLookupByLibrary.simpleMessage(
+      "مش هتنسى جرعتك تاني",
+    ),
+    "welcomeFeature2Title": MessageLookupByLibrary.simpleMessage(
+      "تذكير دواء يومي",
+    ),
+    "welcomeFeature3Sub": MessageLookupByLibrary.simpleMessage(
+      "أي طبيب تروحله يشوف سجلك كامل",
+    ),
+    "welcomeFeature3Title": MessageLookupByLibrary.simpleMessage(
+      "شارك مع الطبيب في ثانية",
+    ),
+    "welcomeFeature4Sub": MessageLookupByLibrary.simpleMessage(
+      "بتتحكم فيها أنت بس",
+    ),
+    "welcomeFeature4Title": MessageLookupByLibrary.simpleMessage(
+      "بياناتك محمية",
     ),
   };
 }

@@ -543,6 +543,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Create New Account`
+  String get createAccount {
+    return Intl.message(
+      'Create New Account',
+      name: 'createAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I already have an account`
+  String get alreadyHaveAccount {
+    return Intl.message(
+      'I already have an account',
+      name: 'alreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Track every medical visit`
+  String get welcomeFeature1Title {
+    return Intl.message(
+      'Track every medical visit',
+      name: 'welcomeFeature1Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your prescriptions and diagnoses in one place`
+  String get welcomeFeature1Sub {
+    return Intl.message(
+      'Your prescriptions and diagnoses in one place',
+      name: 'welcomeFeature1Sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily medication reminder`
+  String get welcomeFeature2Title {
+    return Intl.message(
+      'Daily medication reminder',
+      name: 'welcomeFeature2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Never miss your dose again`
+  String get welcomeFeature2Sub {
+    return Intl.message(
+      'Never miss your dose again',
+      name: 'welcomeFeature2Sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share with your doctor instantly`
+  String get welcomeFeature3Title {
+    return Intl.message(
+      'Share with your doctor instantly',
+      name: 'welcomeFeature3Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Any doctor you visit sees your full record`
+  String get welcomeFeature3Sub {
+    return Intl.message(
+      'Any doctor you visit sees your full record',
+      name: 'welcomeFeature3Sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your data is protected`
+  String get welcomeFeature4Title {
+    return Intl.message(
+      'Your data is protected',
+      name: 'welcomeFeature4Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You're in full control`
+  String get welcomeFeature4Sub {
+    return Intl.message(
+      'You\'re in full control',
+      name: 'welcomeFeature4Sub',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/core/widgets/custom_snak_bar.dart';
 import 'package:healthpassport/features/login/presentation/cubit/bloc/login_bloc.dart';
@@ -24,6 +25,7 @@ class LoginViewBody extends StatefulWidget {
 class _LoginViewBodyState extends State<LoginViewBody> {
   final TextEditingController controller = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   @override
   void dispose() {
     controller.dispose();
@@ -70,7 +72,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                     style: GoogleFonts.cairo(
                       fontSize: 24,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color: AppColors.ink,
                     ),
                   ),
                   const SizedBox(height: 5),

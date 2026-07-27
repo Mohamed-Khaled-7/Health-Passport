@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'app_colors.dart';
+import 'package:healthpassport/core/theme/app_color.dart';
 
-/// أيقونة الأفاتار الدائرية أعلى الشاشة
 class AvatarIcon extends StatelessWidget {
   const AvatarIcon({super.key});
 
