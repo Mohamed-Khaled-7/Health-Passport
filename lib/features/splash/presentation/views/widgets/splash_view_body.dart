@@ -27,7 +27,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       if (!mounted) return;
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) {
-        GoRouter.of(context).push(AppRoutes.loginRoute);
+        GoRouter.of(context).go(AppRoutes.loginRoute);
         return;
       }
       if (!mounted) return;
@@ -36,9 +36,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           .doc(user.uid)
           .get();
       if (doc.exists && doc.data() != null) {
-        GoRouter.of(context).push(AppRoutes.homeRoute);
+        GoRouter.of(context).go(AppRoutes.homeRoute);
       } else {
-        GoRouter.of(context).push(AppRoutes.onBoardingRoute);
+        GoRouter.of(context).go(AppRoutes.onBoardingRoute);
       }
     });
   }

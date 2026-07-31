@@ -12,7 +12,7 @@ final class OtpSentSuccess extends LoginState {
 }
 
 final class VerifyOtpSuccess extends LoginState {
-  final User user;
+  final UserEntity user;
 
   VerifyOtpSuccess({required this.user});
 }

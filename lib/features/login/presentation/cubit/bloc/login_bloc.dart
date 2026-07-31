@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:healthpassport/features/login/domain/entity/user_intity.dart';
 import 'package:healthpassport/features/login/domain/useCases/params/verify_patient_params.dart';
 import 'package:healthpassport/features/login/domain/useCases/send_patient_usecase.dart';
 import 'package:healthpassport/features/login/domain/useCases/verify_patient_usecase.dart';

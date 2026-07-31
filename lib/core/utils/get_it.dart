@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 import 'package:healthpassport/features/login/data/datasource/remote/login_remote_datasource.dart';
-import 'package:healthpassport/features/login/data/repositories/repo_impl.dart';
+import 'package:healthpassport/features/login/data/repo/repo_impl.dart';
 import 'package:healthpassport/features/login/domain/repo/login_repo.dart';
 import 'package:healthpassport/features/login/domain/useCases/send_patient_usecase.dart';
 import 'package:healthpassport/features/login/domain/useCases/verify_patient_usecase.dart';

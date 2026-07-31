@@ -3,6 +3,7 @@ import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:healthpassport/core/errors/failure.dart';
 import 'package:healthpassport/features/login/data/datasource/remote/login_remote_datasource.dart';
+import 'package:healthpassport/features/login/domain/entity/user_intity.dart';
 import 'package:healthpassport/features/login/domain/repo/login_repo.dart';
 
 class LoginRepoImpl implements LoginRepo {
@@ -15,14 +16,20 @@ class LoginRepoImpl implements LoginRepo {
   }
 
   @override
-  Future<Either<Failure, User>> verifyOtp({
+  Future<Either<Failure, UserEntity>> verifyOtp({
     required String verificationId,
     required String otp,
   }) async {
     {
-      return await remoteDataSource.verifyOtp(
+      final result = await remoteDataSource.verifyOtp(
         verificationId: verificationId,
         otp: otp,
+      );
+      return result.map(
+        (firebaseUser) => UserEntity(
+          uid: firebaseUser.uid,
+          phonenumber: firebaseUser.phoneNumber,
+        ),
       );
     }
   }
