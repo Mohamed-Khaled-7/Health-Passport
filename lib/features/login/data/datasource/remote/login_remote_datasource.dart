@@ -33,7 +33,6 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
           }
         },
         codeSent: (String verificationId, int? resendToken) {
-          debugPrint("CODE SENT: $verificationId");
           if (!completer.isCompleted) {
             completer.complete(Right(verificationId));
           }
@@ -52,8 +51,6 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
     required String otp,
   }) async {
     try {
-      debugPrint("VERIFY ID: $verificationId");
-      debugPrint("OTP: $otp");
       final credential = PhoneAuthProvider.credential(
         verificationId: verificationId,
         smsCode: otp,
@@ -64,8 +61,6 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
       );
       return Right(userCredential.user!);
     } on FirebaseAuthException catch (e) {
-      debugPrint("CODE: ${e.code}");
-      debugPrint("MESSAGE: ${e.message}");
       return Left(FirebaseAuthFailure.fromFirebaseAuthException(e));
     }
   }

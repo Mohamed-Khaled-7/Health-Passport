@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:healthpassport/core/constant/app_keys.dart';
-import 'package:healthpassport/core/service/onboarding_service.dart';
 import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/core/widgets/custom_snak_bar.dart';
@@ -53,7 +51,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
       const DropdownOption(label: 'AB+', value: 'AB+'),
       const DropdownOption(label: 'AB-', value: 'AB-'),
     ];
-    final getIt = HiveOnboardingService().box;
 
     final chronicDiseases = <DropdownOption>[
       DropdownOption(label: s.onboardingChronicNoneOption, value: 'none'),
@@ -77,7 +74,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             backgroundColor: AppColors.primaryGreen,
             icons: Icons.done,
           );
-          getIt.put(AppKeys.onboardingKey, true);
           GoRouter.of(context).go(AppRoutes.homeRoute);
         }
 

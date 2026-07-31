@@ -9,13 +9,10 @@ import 'package:healthpassport/features/login/presentation/cubit/bloc/login_bloc
 import 'package:healthpassport/features/onboarding/presentation/cubit/bloc/onboarding_bloc.dart';
 import 'package:healthpassport/firebase_options.dart';
 import 'package:healthpassport/generated/l10n.dart';
-import 'package:hive_flutter/adapters.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  await Hive.initFlutter();
-  await Hive.openBox('settings');
   setup();
   runApp(const HealthPassport());
 }

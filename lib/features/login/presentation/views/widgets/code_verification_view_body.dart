@@ -1,9 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthpassport/core/constant/app_keys.dart';
 import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:healthpassport/core/widgets/custom_snak_bar.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -26,6 +29,7 @@ class CodeVerificationViewBody extends StatefulWidget {
 }
 
 class _CodeVerificationViewBodyState extends State<CodeVerificationViewBody> {
+  final uid = FirebaseAuth.instance.currentUser!.uid;
   final TextEditingController otpController = TextEditingController();
   @override
   void dispose() {
@@ -36,9 +40,17 @@ class _CodeVerificationViewBodyState extends State<CodeVerificationViewBody> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<LoginBloc, LoginState>(
-      listener: (context, state) {
+      listener: (context, state) async {
         if (state is VerifyOtpSuccess) {
-          GoRouter.of(context).push(AppRoutes.onBoardingRoute);
+          final doc = await FirebaseFirestore.instance
+              .collection(AppKeys.firestoreCollection)
+              .doc(uid)
+              .get();
+          if (doc.exists) {
+            GoRouter.of(context).push(AppRoutes.homeRoute);
+          } else {
+            GoRouter.of(context).push(AppRoutes.onBoardingRoute);
+          }
         }
         if (state is LoginFailure) {
           CustomSnakPar(
@@ -104,6 +116,7 @@ class _CodeVerificationViewBodyState extends State<CodeVerificationViewBody> {
                           onPressed: () {
                             context.read<LoginBloc>().add(
                               VerifyOtpEvent(
+                                uid: uid,
                                 otp: otpController.text,
                                 verificationId: widget.verificationId,
                               ),

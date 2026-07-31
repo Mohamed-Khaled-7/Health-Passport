@@ -1,8 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:healthpassport/core/service/onboarding_service.dart';
+import 'package:healthpassport/core/constant/app_keys.dart';
 import 'package:healthpassport/core/theme/app_color.dart';
 import 'package:healthpassport/core/utils/app_routes.dart';
 import 'package:healthpassport/features/splash/presentation/views/widgets/splash_container.dart';
@@ -10,7 +11,6 @@ import 'package:healthpassport/generated/l10n.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
-
   @override
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
@@ -22,16 +22,23 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     navigateToNextScreen();
   }
 
-  void navigateToNextScreen() {
-    Future.delayed(const Duration(seconds: 2), () {
+  void navigateToNextScreen() async {
+    Future.delayed(const Duration(seconds: 2), () async {
       if (!mounted) return;
-
-      final isLoggedIn = FirebaseAuth.instance.currentUser != null;
-      final isOnboarding = HiveOnboardingService().isOnboarding();
-      if (isLoggedIn && isOnboarding) {
-        GoRouter.of(context).go(AppRoutes.homeRoute);
-      } else {
-        GoRouter.of(context).go(AppRoutes.welcomeRoute);
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) {
+        GoRouter.of(context).push(AppRoutes.welcomeRoute);
+        return;
+      }
+      if (!mounted) return;
+      final doc = await FirebaseFirestore.instance
+          .collection(AppKeys.firestoreCollection)
+          .doc(user.uid)
+          .get();
+      if (doc.exists) {
+        GoRouter.of(context).push(AppRoutes.homeRoute);
+      } else if (doc.data() == null) {
+        GoRouter.of(context).push(AppRoutes.onBoardingRoute);
       }
     });
   }
