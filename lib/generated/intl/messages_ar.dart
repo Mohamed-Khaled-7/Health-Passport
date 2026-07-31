@@ -68,7 +68,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم تسجيل الدخول بنجاح",
     ),
     "onboardingAgeHint": MessageLookupByLibrary.simpleMessage("مثال: 24"),
+    "onboardingAgeInvalidValidator": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال عمر صحيح",
+    ),
     "onboardingAgeLabel": MessageLookupByLibrary.simpleMessage("السن"),
+    "onboardingAgeRangeValidator": MessageLookupByLibrary.simpleMessage(
+      "يجب أن يكون العمر بين 1 و120 سنة",
+    ),
+    "onboardingAgeRequiredValidator": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال العمر",
+    ),
     "onboardingBasicInfoSubtitle": MessageLookupByLibrary.simpleMessage(
       "هنستخدمها لنبني سجلك الصحي ونوريك تنبيهات مناسبة ليك",
     ),
@@ -81,6 +90,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "onboardingBloodTypeLabel": MessageLookupByLibrary.simpleMessage(
       "فصيلة الدم",
     ),
+    "onboardingBloodTypeValidator": MessageLookupByLibrary.simpleMessage(
+      "يرجى اختيار فصيلة الدم",
+    ),
     "onboardingChronicBloodPressureOption":
         MessageLookupByLibrary.simpleMessage("ضغط الدم"),
     "onboardingChronicDiabetesOption": MessageLookupByLibrary.simpleMessage(
@@ -91,6 +103,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "onboardingChronicDiseaseLabel": MessageLookupByLibrary.simpleMessage(
       "هل عندك حالة مزمنة؟",
+    ),
+    "onboardingChronicDiseaseValidator": MessageLookupByLibrary.simpleMessage(
+      "يرجى اختيار الحالة المزمنة",
     ),
     "onboardingChronicHeartOption": MessageLookupByLibrary.simpleMessage(
       "القلب",
@@ -103,6 +118,14 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "onboardingFullNameLabel": MessageLookupByLibrary.simpleMessage(
       "الاسم بالكامل",
+    ),
+    "onboardingNameInvalidCharactersValidator":
+        MessageLookupByLibrary.simpleMessage("يحتوي الاسم على أحرف غير صالحة"),
+    "onboardingNameMinLengthValidator": MessageLookupByLibrary.simpleMessage(
+      "يجب أن يتكون الاسم من حرفين على الأقل",
+    ),
+    "onboardingNameRequiredValidator": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال الاسم",
     ),
     "onboardingStartButtonLabel": MessageLookupByLibrary.simpleMessage(
       "ابدأ سجلك",

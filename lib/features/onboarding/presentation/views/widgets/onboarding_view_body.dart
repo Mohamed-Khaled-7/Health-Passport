@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:healthpassport/core/theme/app_color.dart';
@@ -14,6 +15,8 @@ import 'avatar_icon.dart';
 import 'dropdown_option.dart';
 import 'primary_button.dart';
 import 'title_section.dart';
+
+enum ChronicDisease { none, diabetes, hypertension, heartDisease }
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -53,16 +56,22 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     ];
 
     final chronicDiseases = <DropdownOption>[
-      DropdownOption(label: s.onboardingChronicNoneOption, value: 'none'),
+      DropdownOption(
+        label: s.onboardingChronicNoneOption,
+        value: ChronicDisease.none.name,
+      ),
       DropdownOption(
         label: s.onboardingChronicDiabetesOption,
-        value: 'diabetes',
+        value: ChronicDisease.diabetes.name,
       ),
       DropdownOption(
         label: s.onboardingChronicBloodPressureOption,
-        value: 'blood_pressure',
+        value: ChronicDisease.hypertension.name,
       ),
-      DropdownOption(label: s.onboardingChronicHeartOption, value: 'heart'),
+      DropdownOption(
+        label: s.onboardingChronicHeartOption,
+        value: ChronicDisease.heartDisease.name,
+      ),
     ];
 
     return BlocConsumer<OnboardingBloc, OnboardingState>(
@@ -105,13 +114,19 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     ),
                     const SizedBox(height: 24),
                     CustomTextField(
+                      inputFormatters: [
+                        FilteringTextInputFormatter.allow(
+                          RegExp(r"[a-zA-Z\u0600-\u06FF\s'-]"),
+                        ),
+                      ],
+                      keyboardType: TextInputType.name,
                       validator: (value) {
                         if (value == null || value.trim().isEmpty) {
-                          return 'Please enter your name';
+                          return s.onboardingNameRequiredValidator;
                         }
 
                         if (value.trim().length < 2) {
-                          return 'Name must be at least 2 characters';
+                          return s.onboardingNameMinLengthValidator;
                         }
 
                         final nameRegex = RegExp(
@@ -119,7 +134,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                         );
 
                         if (!nameRegex.hasMatch(value.trim())) {
-                          return 'Name contains invalid characters';
+                          return s.onboardingNameInvalidCharactersValidator;
                         }
 
                         return null;
@@ -132,19 +147,21 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     ),
                     const SizedBox(height: 6),
                     CustomTextField(
+                      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                      keyboardType: TextInputType.number,
                       validator: (value) {
                         if (value == null || value.trim().isEmpty) {
-                          return 'Please enter your age';
+                          return s.onboardingAgeRequiredValidator;
                         }
 
                         final age = int.tryParse(value.trim());
 
                         if (age == null) {
-                          return 'Please enter a valid age';
+                          return s.onboardingAgeInvalidValidator;
                         }
 
                         if (age < 1 || age > 120) {
-                          return 'Age must be between 1 and 120';
+                          return s.onboardingAgeRangeValidator;
                         }
 
                         return null;
@@ -157,6 +174,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     ),
                     const SizedBox(height: 20),
                     LabeledDropdownField(
+                      validator: (value) => value == null
+                          ? S.of(context).onboardingBloodTypeValidator
+                          : null,
                       label: s.onboardingBloodTypeLabel,
                       hint: s.onboardingBloodTypeHint,
                       value: _selectedBloodType,
@@ -167,6 +187,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                     ),
                     const SizedBox(height: 20),
                     LabeledDropdownField(
+                      validator: (value) => value == null
+                          ? S.of(context).onboardingChronicDiseaseValidator
+                          : null,
                       label: s.onboardingChronicDiseaseLabel,
                       hint: s.onboardingChronicDiseaseHint,
                       value: _selectedChronicDisease,
@@ -185,8 +208,8 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                         context.read<OnboardingBloc>().add(
                           SavePatientEvent(
                             patient: PatientEntity(
-                              name: namecontroller.text,
-                              age: int.parse(agecontroller.text),
+                              name: namecontroller.text.trim(),
+                              age: int.parse(agecontroller.text.trim()),
                               bloodType: _selectedBloodType!,
                               chronicDisease: _selectedChronicDisease!,
                             ),

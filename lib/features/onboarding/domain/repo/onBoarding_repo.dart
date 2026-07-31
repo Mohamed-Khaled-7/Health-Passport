@@ -7,7 +7,5 @@ abstract class OnBoardingRepo {
     required PatientEntity patient,
   });
 
-  Future<Either<Failure, PatientEntity>> getOnBoardingData({
-    required String uid,
-  });
+  Future<Either<Failure, PatientEntity?>> getPatientData({required String uid});
 }

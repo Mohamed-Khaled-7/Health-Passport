@@ -10,8 +10,10 @@ class LabeledDropdownField extends StatelessWidget {
   final String? value;
   final List<DropdownOption> options;
   final ValueChanged<String?> onChanged;
+  final String? Function(String?)? validator;
 
   const LabeledDropdownField({
+    required this.validator,
     super.key,
     required this.label,
     required this.hint,
@@ -35,6 +37,7 @@ class LabeledDropdownField extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         DropdownButtonFormField<String>(
+          validator: validator,
           initialValue: value,
           isExpanded: true,
           icon: const Icon(Icons.keyboard_arrow_down),

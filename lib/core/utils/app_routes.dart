@@ -10,7 +10,6 @@ class AppRoutes {
   static final String verification = '/CodeVerificationViewBody';
   static final String homeRoute = '/HomeView';
   static final String onBoardingRoute = '/OnBoardingView';
-  static final String welcomeRoute = '/WelcomeView';
   static final routes = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SplashView()),

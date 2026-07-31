@@ -55,7 +55,6 @@
     "oboardingsavesuccess": "تم تسجيل الدخول بنجاح",
     "createAccount": "إنشاء حساب جديد",
     "alreadyHaveAccount": "عندي حساب — تسجيل الدخول",
-    
     "welcomeFeature1Title": "سجل كل زيارة طبية",
     "welcomeFeature1Sub": "روشتاتك وتشخيصاتك في مكان واحد",
     "welcomeFeature2Title": "تذكير دواء يومي",
@@ -63,5 +62,13 @@
     "welcomeFeature3Title": "شارك مع الطبيب في ثانية",
     "welcomeFeature3Sub": "أي طبيب تروحله يشوف سجلك كامل",
     "welcomeFeature4Title": "بياناتك محمية",
-    "welcomeFeature4Sub": "بتتحكم فيها أنت بس"
+    "welcomeFeature4Sub": "بتتحكم فيها أنت بس",
+    "onboardingBloodTypeValidator": "يرجى اختيار فصيلة الدم",
+    "onboardingChronicDiseaseValidator": "يرجى اختيار الحالة المزمنة",
+    "onboardingNameRequiredValidator": "يرجى إدخال الاسم",
+    "onboardingNameMinLengthValidator": "يجب أن يتكون الاسم من حرفين على الأقل",
+    "onboardingNameInvalidCharactersValidator": "يحتوي الاسم على أحرف غير صالحة",
+    "onboardingAgeRequiredValidator": "يرجى إدخال العمر",
+    "onboardingAgeInvalidValidator": "يرجى إدخال عمر صحيح",
+    "onboardingAgeRangeValidator": "يجب أن يكون العمر بين 1 و120 سنة"
 }

@@ -20,7 +20,7 @@ final class SavePatientFailure extends OnboardingState {
 final class GetPatientLoading extends OnboardingState {}
 
 final class GetPatientSuccess extends OnboardingState {
-  final PatientEntity patient;
+  final PatientEntity? patient;
 
   GetPatientSuccess(this.patient);
 }

@@ -8,8 +8,7 @@ class SendOtpEvent extends LoginEvent {
 }
 
 class VerifyOtpEvent extends LoginEvent {
-  final String  uid;
   final String verificationId;
   final String otp;
-  VerifyOtpEvent({required this.verificationId, required this.otp,required this.uid});
+  VerifyOtpEvent({required this.verificationId, required this.otp});
 }

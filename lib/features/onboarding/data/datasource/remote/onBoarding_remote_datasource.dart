@@ -4,7 +4,7 @@ import 'package:healthpassport/core/constant/app_keys.dart';
 import 'package:healthpassport/features/onboarding/data/model/patient_model.dart';
 
 abstract class OnBoardingRemoteDataSource {
-  Future<PatientModel> getOnBoardingData({required String uid});
+  Future<PatientModel?> getOnBoardingData({required String uid});
   Future<void> savePatientData({required PatientModel patient});
 }
 
@@ -35,14 +35,14 @@ class OnBoardingRemoteDataSourceImpl implements OnBoardingRemoteDataSource {
   }
 
   @override
-  Future<PatientModel> getOnBoardingData({required String uid}) async {
+  Future<PatientModel?> getOnBoardingData({required String uid}) async {
     try {
       final doc = await firestore
           .collection(AppKeys.firestoreCollection)
           .doc(uid)
           .get();
       if (!doc.exists || doc.data() == null) {
-        throw Exception('Patient data not found.');
+        return null;
       }
       return PatientModel.fromMap(doc.data()!);
     } on FirebaseException catch (e) {

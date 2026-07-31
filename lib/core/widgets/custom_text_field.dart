@@ -10,10 +10,14 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final int h;
   final String label;
+  final TextInputType? keyboardType;
+  List<TextInputFormatter>? inputFormatters;
   final int w;
   final TextEditingController controller;
 
   CustomTextField({
+    required this.inputFormatters,
+    required this.keyboardType,
     Key? key,
     required this.validator,
 
@@ -27,7 +31,6 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-
       children: [
         Text(
           label,
@@ -40,9 +43,10 @@ class CustomTextField extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: 6.h, left: 4.w, right: 4.w),
           child: TextFormField(
+            inputFormatters: inputFormatters,
             validator: validator,
             controller: controller,
-
+            keyboardType: keyboardType,
             textDirection: TextDirection.ltr,
             textAlign: TextAlign.right,
             style: GoogleFonts.cairo(fontSize: 20.sp, color: AppColors.ink),

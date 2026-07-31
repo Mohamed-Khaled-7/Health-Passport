@@ -643,6 +643,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Please select your blood type`
+  String get onboardingBloodTypeValidator {
+    return Intl.message(
+      'Please select your blood type',
+      name: 'onboardingBloodTypeValidator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select your chronic disease`
+  String get onboardingChronicDiseaseValidator {
+    return Intl.message(
+      'Please select your chronic disease',
+      name: 'onboardingChronicDiseaseValidator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your name`
+  String get onboardingNameRequiredValidator {
+    return Intl.message(
+      'Please enter your name',
+      name: 'onboardingNameRequiredValidator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name must be at least 2 characters`
+  String get onboardingNameMinLengthValidator {
+    return Intl.message(
+      'Name must be at least 2 characters',
+      name: 'onboardingNameMinLengthValidator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name contains invalid characters`
+  String get onboardingNameInvalidCharactersValidator {
+    return Intl.message(
+      'Name contains invalid characters',
+      name: 'onboardingNameInvalidCharactersValidator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your age`
+  String get onboardingAgeRequiredValidator {
+    return Intl.message(
+      'Please enter your age',
+      name: 'onboardingAgeRequiredValidator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid age`
+  String get onboardingAgeInvalidValidator {
+    return Intl.message(
+      'Please enter a valid age',
+      name: 'onboardingAgeInvalidValidator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age must be between 1 and 120`
+  String get onboardingAgeRangeValidator {
+    return Intl.message(
+      'Age must be between 1 and 120',
+      name: 'onboardingAgeRangeValidator',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

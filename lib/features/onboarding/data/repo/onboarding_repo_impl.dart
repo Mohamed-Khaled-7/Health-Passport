@@ -11,7 +11,7 @@ class OnboardingRepoImpl implements OnBoardingRepo {
   final OnBoardingRemoteDataSource remoteDataSource;
   OnboardingRepoImpl({required this.remoteDataSource});
   @override
-  Future<Either<Failure, PatientModel>> getOnBoardingData({
+  Future<Either<Failure, PatientModel?>> getPatientData({
     required String uid,
   }) async {
     try {

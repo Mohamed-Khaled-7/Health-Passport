@@ -40,9 +40,7 @@ class OtpTextField extends StatelessWidget {
 
       pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
 
-      onCompleted: (pin) {
-        debugPrint(pin);
-      },
+      onCompleted: (pin) {},
     );
   }
 }

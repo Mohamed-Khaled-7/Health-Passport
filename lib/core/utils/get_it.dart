@@ -8,9 +8,10 @@ import 'package:healthpassport/features/login/domain/useCases/send_patient_useca
 import 'package:healthpassport/features/login/domain/useCases/verify_patient_usecase.dart';
 import 'package:healthpassport/features/login/presentation/cubit/bloc/login_bloc.dart';
 import 'package:healthpassport/features/onboarding/data/datasource/remote/onBoarding_remote_datasource.dart';
-import 'package:healthpassport/features/onboarding/data/repo/onboarding_repo.dart';
+import 'package:healthpassport/features/onboarding/data/repo/onboarding_repo_impl.dart';
 import 'package:healthpassport/features/onboarding/domain/repo/onBoarding_repo.dart';
-import 'package:healthpassport/features/onboarding/domain/usecases/onboarding_usecase.dart';
+import 'package:healthpassport/features/onboarding/domain/usecases/get_patient_usecase.dart';
+import 'package:healthpassport/features/onboarding/domain/usecases/save_patient_usecase.dart';
 import 'package:healthpassport/features/onboarding/presentation/cubit/bloc/onboarding_bloc.dart';
 
 final gitIt = GetIt.instance;

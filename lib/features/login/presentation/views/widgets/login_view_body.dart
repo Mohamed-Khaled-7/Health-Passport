@@ -54,7 +54,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
         if (state is OtpSentSuccess) {
           GoRouter.of(
             context,
-          ).push(AppRoutes.verification, extra: state.verificationId);
+          ).go(AppRoutes.verification, extra: state.verificationId);
         }
       },
       builder: (context, state) {

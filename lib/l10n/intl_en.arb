@@ -61,5 +61,13 @@
     "welcomeFeature3Title": "Share with your doctor instantly",
     "welcomeFeature3Sub": "Any doctor you visit sees your full record",
     "welcomeFeature4Title": "Your data is protected",
-    "welcomeFeature4Sub": "You're in full control"
+    "welcomeFeature4Sub": "You're in full control",
+    "onboardingBloodTypeValidator": "Please select your blood type",
+    "onboardingChronicDiseaseValidator": "Please select your chronic disease",
+    "onboardingNameRequiredValidator": "Please enter your name",
+    "onboardingNameMinLengthValidator": "Name must be at least 2 characters",
+    "onboardingNameInvalidCharactersValidator": "Name contains invalid characters",
+    "onboardingAgeRequiredValidator": "Please enter your age",
+    "onboardingAgeInvalidValidator": "Please enter a valid age",
+    "onboardingAgeRangeValidator": "Age must be between 1 and 120"
 }

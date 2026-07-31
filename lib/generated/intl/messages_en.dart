@@ -74,7 +74,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Logged in successfully",
     ),
     "onboardingAgeHint": MessageLookupByLibrary.simpleMessage("e.g. 24"),
+    "onboardingAgeInvalidValidator": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid age",
+    ),
     "onboardingAgeLabel": MessageLookupByLibrary.simpleMessage("Age"),
+    "onboardingAgeRangeValidator": MessageLookupByLibrary.simpleMessage(
+      "Age must be between 1 and 120",
+    ),
+    "onboardingAgeRequiredValidator": MessageLookupByLibrary.simpleMessage(
+      "Please enter your age",
+    ),
     "onboardingBasicInfoSubtitle": MessageLookupByLibrary.simpleMessage(
       "We\'ll use this to build your health record and show you relevant alerts",
     ),
@@ -87,6 +96,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "onboardingBloodTypeLabel": MessageLookupByLibrary.simpleMessage(
       "Blood Type",
     ),
+    "onboardingBloodTypeValidator": MessageLookupByLibrary.simpleMessage(
+      "Please select your blood type",
+    ),
     "onboardingChronicBloodPressureOption":
         MessageLookupByLibrary.simpleMessage("Blood Pressure"),
     "onboardingChronicDiabetesOption": MessageLookupByLibrary.simpleMessage(
@@ -98,6 +110,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "onboardingChronicDiseaseLabel": MessageLookupByLibrary.simpleMessage(
       "Do you have a chronic condition?",
     ),
+    "onboardingChronicDiseaseValidator": MessageLookupByLibrary.simpleMessage(
+      "Please select your chronic disease",
+    ),
     "onboardingChronicHeartOption": MessageLookupByLibrary.simpleMessage(
       "Heart Disease",
     ),
@@ -107,6 +122,16 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "onboardingFullNameLabel": MessageLookupByLibrary.simpleMessage(
       "Full Name",
+    ),
+    "onboardingNameInvalidCharactersValidator":
+        MessageLookupByLibrary.simpleMessage(
+          "Name contains invalid characters",
+        ),
+    "onboardingNameMinLengthValidator": MessageLookupByLibrary.simpleMessage(
+      "Name must be at least 2 characters",
+    ),
+    "onboardingNameRequiredValidator": MessageLookupByLibrary.simpleMessage(
+      "Please enter your name",
     ),
     "onboardingStartButtonLabel": MessageLookupByLibrary.simpleMessage(
       "Start Your Record",

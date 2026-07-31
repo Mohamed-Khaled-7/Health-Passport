@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:healthpassport/features/onboarding/domain/entity/patient_entity.dart';
-import 'package:healthpassport/features/onboarding/domain/usecases/onboarding_usecase.dart';
+import 'package:healthpassport/features/onboarding/domain/usecases/get_patient_usecase.dart';
+import 'package:healthpassport/features/onboarding/domain/usecases/save_patient_usecase.dart';
 import 'package:meta/meta.dart';
 
 part 'onboarding_event.dart';
