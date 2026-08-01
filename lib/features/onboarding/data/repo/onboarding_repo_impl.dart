@@ -20,6 +20,8 @@ class OnboardingRepoImpl implements OnBoardingRepo {
       return Right(patient);
     } on FirebaseException catch (e) {
       return Left(FirestoreFailure.fromFirebaseException(e));
+    } catch (e) {
+      return Left(FirestoreFailure(errMessage: e.toString()));
     }
   }
 
@@ -39,6 +41,8 @@ class OnboardingRepoImpl implements OnBoardingRepo {
       return const Right(null);
     } on FirebaseException catch (e) {
       return Left(FirestoreFailure.fromFirebaseException(e));
+    } catch (e) {
+      return Left(FirestoreFailure(errMessage: e.toString()));
     }
   }
 }

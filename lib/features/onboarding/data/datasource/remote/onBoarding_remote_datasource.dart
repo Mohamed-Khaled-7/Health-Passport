@@ -28,7 +28,7 @@ class OnBoardingRemoteDataSourceImpl implements OnBoardingRemoteDataSource {
           .doc(uid)
           .set(patient.toMap());
     } on FirebaseException catch (e) {
-      throw Exception(e.message);
+      rethrow;
     } catch (e) {
       throw Exception(e.toString());
     }
@@ -46,7 +46,7 @@ class OnBoardingRemoteDataSourceImpl implements OnBoardingRemoteDataSource {
       }
       return PatientModel.fromMap(doc.data()!);
     } on FirebaseException catch (e) {
-      throw Exception(e.message);
+      rethrow;
     } catch (e) {
       throw Exception(e.toString());
     }
